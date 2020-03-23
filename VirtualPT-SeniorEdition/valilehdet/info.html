@@ -16,10 +16,10 @@
     <h2>Tervetuloa tietopankkiin! Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
     <h3>Vie hiiri otsikon päälle lukeaksesi vinkkejä.</h3>
     <section class="infot">
-    <div class="drop">
-        <h3>Ikääntymisen vaikutukset kehoon.</h3>
-            <div class="drop1">
-                <p>tähän tulee sisältöä</p>
+        <div>
+        <button onclick="reveal()">Ikääntymisen vaikutukset kehoon.</button>
+            <div id="drop">
+                <p>tähän tulee sisältöä REEEEEE</p>
             </div>
         </div>
     <div class="drop">
@@ -48,5 +48,16 @@
         </div>
     </div>
 </section>
+
+<script>
+    function reveal(){
+        var x = document.getElementById("drop");
+        if(x.style.display === "none"){
+            x.style.display = "block";
+        }else{
+            x.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
