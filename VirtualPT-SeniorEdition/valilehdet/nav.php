@@ -17,7 +17,7 @@ include("includes/https.php");
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Ykäsonni</label>
+        <label class="logo">Virtual PT</label>
         <ul>
             <li><a class="active" href="#">Etusivu</a></li>
             <li><a href="#">Päiväkirja</a></li>
