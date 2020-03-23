@@ -13,6 +13,33 @@
         <a href="#">Tietopankki</a>
         <a href="logout.php">Kirjaudu ulos</a>
     </nav>
+    <h2>Tervetuloa tietopankkiin! Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
+    <h3>Vie hiiri otsikon päälle lukeaksesi vinkkejä.</h3>
+    <section class="infot">
+        <div>
+        <button onclick="reveal()">Ikääntymisen vaikutukset kehoon.</button>
+            <div id="drop">
+                <p>tähän tulee sisältöä REEEEEE</p>
+            </div>
+        </div>
+    <div class="drop">
+        <h3>Miksi kannattaa liikkua?</h3>
+            <div class="drop1">
+                <p>tähän tulee sisältöä</p>
+            </div>
+    </div>
+    <div class="drop">
+            <h3>Mitä on terveysliikunta?</h3>
+                <div class="drop1">
+                    <p>tähän tulee sisältöä</p>
+                </div>
+    </div>
+    <div class="drop">
+        <h3>Mitä on kuntoa kohottava liikunta?</h3>
+            <div class="drop1">
+                <p>tähän tulee sisältöä</p>
+            </div>
+    </div>
     <div class="drop">
     <h3>Liikuntasuositukset</h3>
         <div class="drop1">
@@ -20,5 +47,17 @@
             </p>
         </div>
     </div>
+</section>
+
+<script>
+    function reveal(){
+        var x = document.getElementById("drop");
+        if(x.style.display === "none"){
+            x.style.display = "block";
+        }else{
+            x.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
