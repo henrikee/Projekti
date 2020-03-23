@@ -14,9 +14,9 @@ a{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
+    min-width: 16rem;
+    box-shadow: 0rem, 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+    padding: 1rem 1rem;
     z-index: 1;
   }
   .drop:hover .drop1 {
