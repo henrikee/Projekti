@@ -1,0 +1,15 @@
+<nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Virtual PT</label>
+        <ul>
+            <li><a class="active" href="#">Etusivu</a></li>
+            <li><a href="#">Päiväkirja</a></li>
+            <li><a href="#">Liikunta</a></li>
+            <li><a href="#">Tietopankki</a></li>
+            <li><a href="#">Kirjaudu ulos</a></li>
+        </ul>
+    </nav>
+
