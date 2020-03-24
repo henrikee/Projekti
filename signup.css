@@ -1,43 +1,49 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("pics/elderyoga.jpg");
+    background-image: url("./pics/elderyoga.jpg");
     background-position: center;
     background-repeat: none;
     background-size: 275vh;
+    
 }
-.boxLogin {
-    text-align: center;
-    background-color:rgba(255,165,0,0.4);
-    padding: 10px;
-    border-radius: 4px;
-    color:white;
-    text-shadow: 2px 1px #000000;
-    letter-spacing: 1px;
-    font-weight:bold;
-    height:30vh;
-    width: 45vh;
-    margin-top: 20vh;
-    margin-left: auto;
-    margin-right: auto; 
-    display: block;
-}
-.btn{
-    background-color:rgba(105, 33, 33, 0.911);
+p{
     color: white;
+    box-shadow: black;
     text-shadow: 2px 1px #000000;
-    letter-spacing: 1px;
-    padding: 1px;
-    margin: 3%;
-    display: inline;
+}
+.boxCreateAccount{
+        text-align: center;
+        background-color:rgba(255,165,0,0.4);
+        text-shadow: 2px 1px #000000;
+        letter-spacing: 1px;
+        padding: 3px;
+        border-radius: 4px;
+        color:white;
+        font-weight:bold;
+        height:50vh;
+        width: 100vh;
+        margin-top: 20vh;
+        margin-left: auto;
+        margin-right: auto; 
+        display: block;
 }
 input{
-    font-weight: bolder;
     width: 20vh;
     height: 4vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
     background-color:rgb(221, 243, 243);
+}
+.btn{
+    font-weight: bolder;
+    background-color:rgba(105, 33, 33, 0.911);
+    color: white;
+    text-shadow: 2px 1px #000000;
+    letter-spacing: 1px;
+    padding: 4px;
+    margin: 3%;
+    display: inline;
 }
 *{
     padding: 0;
@@ -107,6 +113,42 @@ a.active,a:hover{
     .checkbtn{
         display: block;
     }
+   .boxCreateAccount{
+    height:70vh;
+    width: 50vh;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#FFD700;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+}
+@media only screen and (max-width: 870px) {
+    label.logo{
+        font-size: 2.7vh;
+        padding-left: 20vh;
+    }
     ul{
         position: fixed;
         width: 100%;
@@ -133,5 +175,4 @@ a.active,a:hover{
         left: 0;
     
     }
-    
 }
