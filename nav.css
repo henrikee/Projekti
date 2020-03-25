@@ -7,14 +7,21 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD:css/nav.css
+=======
+    background-image: url("pics/lake.jpg");
+>>>>>>> henkka:nav.css
     display: table;
     height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+<<<<<<< HEAD:css/nav.css
     background-image: url("../img/lake.jpg");
  
+=======
+>>>>>>> henkka:nav.css
 }
 nav{
     background-color:orange;
