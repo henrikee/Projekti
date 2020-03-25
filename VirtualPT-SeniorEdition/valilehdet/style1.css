@@ -28,15 +28,6 @@ a{
       display: flex;
       justify-content: center;
 }
-#drop{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 16rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
 button{
     font-size: 120%;
     font-family: inherit;
@@ -44,7 +35,7 @@ button{
     padding: none;
     background-color:rgba(0,0,0,0.0);
 }
-#drops{
+.text{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
