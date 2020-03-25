@@ -95,28 +95,16 @@ a.active,a:hover{
         font-size: 4vh;
         padding-left: 20vh;
     }
-<<<<<<< HEAD:login.css
    
-=======
->>>>>>> branchtumppi:css/login.css
     nav ul li a{
         font-size: 13px;
     }
 }
 @media only screen and (max-width: 858px){
-<<<<<<< HEAD:login.css
     label.logo{
         font-size: 2.7vh;
-=======
-    body{
-        background-size: 190vh;
-        background-repeat: no-repeat;
     }
-    label.logo{
-        font-size: 16px;
-        padding: 4px;
->>>>>>> branchtumppi:css/login.css
-    }
+    
     .checkbtn{
         display: block;
     }
