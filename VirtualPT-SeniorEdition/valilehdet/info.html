@@ -3,22 +3,15 @@
 <head>
     <title>Tietopankki</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="info.css">
 </head>
 <body>
-    <nav>   
-        <a href="homepage.html">Kotisivu</a>
-        <a href="diary.html">Päiväkirja</a>
-        <a href="exersice.html">Liikunta</a>
-        <a href="#">Tietopankki</a>
-        <a href="logout.php">Kirjaudu ulos</a>
-    </nav>
     <h2>Tervetuloa tietopankkiin! Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
     <h3>Vie hiiri otsikon päälle lukeaksesi vinkkejä.</h3>
     <section class="infot">
-        <div>
-        <button onclick="reveal()">Ikääntymisen vaikutukset kehoon.</button>
-            <div id="drops">
+        <div class="drop">
+        <h3>Ikääntymisen vaikutukset kehoon.</h3>
+            <div class="drop1">
                 <p>Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö alkaa heikkenemään ja surkastumaan vanhetessa, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset näkyvät kehossa mm. lihasmassan katoamisena, aerobisen kunnon ja tasapainon heikkenemisenä sekä liikkuvuuden pienentymisenä. <br>Lihasmassan katoaminen kiihtyy 50 ikävuodesta ylöspäin. Massan lisäksi voima ja kyky nopeisiin suorituksiin heikkenevät. Samalla aerobinen kestävyys alenee, sillä keuhkojen hapenottokyky surkastuu. Tasapainon heikkenemiseen vaikuttaa lihasmassan kadon lisäksi muutokset hermoston toiminnassa, joka ylläpitää korvassa sijaitsevaa tasapainoelintä. Liikkuvuuden pienenemiseen voivat vaikuttaa esimerkiksi luuston epämuodostumat, lihasten heikkous, jänteien lyhentyminen ja kudoksen kimmoisuuden vähentyminen. <br>Näin lueteltuna muutokset kuulostavat melko kauhistuttavilta, mutta positiivinen uutinen on se, että niihin kaikkiin voi vaikuttaa merkittävästi omalla liikkumisella, ravitsemuksella ja levolla.</p>
             </div>
         </div>
@@ -50,7 +43,7 @@
 
 <script>
     function reveal(){
-        var x = document.getElementById("drops");
+        var x = document.querySelectorAll(".text");
         if(x.style.display === "none"){
             x.style.display = "block";
         }else{
