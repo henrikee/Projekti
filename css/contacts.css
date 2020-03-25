@@ -9,40 +9,10 @@ p{
     color: white;
     box-shadow: black;
     text-shadow: 2px 1px #000000;
+    float: left;
 }
-.boxCreateAccount{
-        text-align: center;
-        background-color:rgba(255,165,0,0.4);
-        text-shadow: 2px 1px #000000;
-        letter-spacing: 1px;
-        padding: 3px;
-        border-radius: 4px;
-        color:white;
-        font-weight:bold;
-        height:50vh;
-        width: 100vh;
-        margin-top: 20vh;
-        margin-left: auto;
-        margin-right: auto; 
-        display: block;
-}
-input{
-    width: 20vh;
-    height: 4vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    background-color:rgb(221, 243, 243);
-}
-.btn{
-    font-weight: bolder;
-    background-color:rgba(105, 33, 33, 0.911);
-    color: white;
-    text-shadow: 2px 1px #000000;
-    letter-spacing: 1px;
-    padding: 4px;
-    margin: 3%;
-    display: inline;
+.title{
+    font-size: 3vh;
 }
 *{
     padding: 0;
@@ -50,6 +20,24 @@ input{
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+}
+.boxPerson{
+    background-color:rgba(255,165,0,0.4);
+    height:30vh;
+    width: 45vh;
+    margin: 10vh;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 4px;
+}
+section{
+    float: right;
+}
+.image{
+    width: 20vh;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 nav{  
     background-color:orange;
