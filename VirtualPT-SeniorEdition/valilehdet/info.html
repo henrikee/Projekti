@@ -31,7 +31,7 @@
     <div class="drop">
         <h3>Mitä on terveysliikunta?</h3>
             <div class="drop1">
-                <p>tähän tulee sisältöä</p>
+                <p>tähän tulee sisältöä REEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEE EEEEEEEEE EEEEEEEEE EEEEEEEEEEE</p>
             </div>
     </div>
     <div class="drop">
@@ -46,9 +46,28 @@
             <p>Reipasta liikkumista suositellaan vähintään 2,5 tuntia viikossa. Tiedät liikkuvasi reippaasti, jos hengästyt hiukan ja liikunta tuntuu jokseenkin kuormittavalta sen kestäessä vähintään 20 minuuttia. Jos Liikut raskaasti, viikottainen aika tulisi olla vähintään 1 tunti ja 15 minuuttia. Raskasta liikuntaa on sellainen, jossa tunnet sykkeesi nousevan huomattavasti etkä välttämättä jaksa tehdä sitä kerralla puoltatuntia pidempään.</p>
         </div>
     </div>
+    <button onclick="testi()">testi</button>
+    <p id="p1">lalallaaa</p>
+    <button onclick="testi1()">testi1</button>
+    <button onclick="testi2()">testi2</button>
+    <button onclick="testi3()">testi3</button>
+
 </section>
 
 <script>
+    function testi(){
+        document.getElementById("p1").innerHTML = "New text!";
+    }
+    function testi1(){
+        document.getElementById("p1").innerHTML = "New text";
+    }
+    function testi2(){
+        document.getElementById("p1").innerHTML = "New !";
+    }
+    function testi3(){
+        document.getElementById("p1").innerHTML = "Nt!";
+    }
+   
     function reveal(){
         var x = document.querySelectorAll(".text");
         if(x.style.display === "none"){
