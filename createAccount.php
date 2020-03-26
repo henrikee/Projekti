@@ -1,23 +1,9 @@
 <?php
-include("includes/navSignup.php");
+include("includes/header.php");
+include("includes/navLogin.php");
+include("forms/formSignup.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href= "css/signup.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="boxCreateAccount">
-        <?php
-        include("forms/formSignup.php");
-        ?>
-        </div>  
-        
-    <?php
+<?php
 //Lomakkeen submit painettu?
 if(isset($_POST['submitUser'])){
   //Tarkistetaan syötteet myös palvelimella
@@ -73,7 +59,7 @@ if(isset($_POST['submitUser'])){
 if(isset($_POST['submitBack'])){
   session_unset();
   session_destroy();
-  header("Location: index.php");
+  header("Location: login.php");
 }
 
 }
@@ -87,6 +73,3 @@ if(isset($_SESSION['swarningInput'])){
 
 
 
-
-</body>
-</html>

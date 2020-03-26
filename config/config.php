@@ -1,7 +1,7 @@
 <?php
 //Tietokanta
 $user = 'henrikee';        //Käytäjänimi 
-$pass = 'Qua6hodi';        //Salasana, ei OMAn vaan phpAdminin
+$pass = 'tumppionsexy';        //Salasana, ei OMAn vaan phpAdminin
 $host = 'mysql.metropolia.fi';  //Tietokantapalvelin
 $dbname = 'henrikee';        //Tietokanta
 $added='#â‚¬%&&/';

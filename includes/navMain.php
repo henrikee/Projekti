@@ -10,6 +10,6 @@
             <li><a href="#">Päiväkirja</a></li>
             <li><a href="#">Liikunta</a></li>
             <li><a href="#">Tietopankki</a></li>
-            <li><a href="#">Kirjaudu ulos</a></li>
+            <li><a href="logOutUser.php">Kirjaudu ulos</a></li>
         </ul>
     </nav> 
