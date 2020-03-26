@@ -1,9 +1,10 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("happyseniors.jpg");
-    background-position: center;
-    background-repeat: none;
-    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 nav{
     justify-content: center;
@@ -17,11 +18,15 @@ a{
     position: relative;
     display: inline-block;
     margin-right: 1rem;
-  }
+}
+h3{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
 .drop1{
     display: none;
     position: absolute;
-    text-align: center;
+    text-align: left;
     background-color:rgba(255,165,0,0.4);
     min-width: 16rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -30,6 +35,12 @@ a{
 }
 .drop:hover .drop1 {
     display: block;
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: none;
 }
 .infot{
       margin: auto;
