@@ -46,20 +46,27 @@
             <p>Reipasta liikkumista suositellaan vähintään 2,5 tuntia viikossa. Tiedät liikkuvasi reippaasti, jos hengästyt hiukan ja liikunta tuntuu jokseenkin kuormittavalta sen kestäessä vähintään 20 minuuttia. Jos Liikut raskaasti, viikottainen aika tulisi olla vähintään 1 tunti ja 15 minuuttia. Raskasta liikuntaa on sellainen, jossa tunnet sykkeesi nousevan huomattavasti etkä välttämättä jaksa tehdä sitä kerralla puoltatuntia pidempään.</p>
         </div>
     </div>
-    <button onclick="testi()">testi</button>
+    <button onclick="func1()">Miksi kannattaa liikkua?</button>
     <p id="p1">lalallaaa</p>
-    <button onclick="testi1()">testi1</button>
+    <button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button>
     <button onclick="testi2()">testi2</button>
     <button onclick="testi3()">testi3</button>
 
 </section>
 
 <script>
-    function testi(){
-        document.getElementById("p1").innerHTML = "New text!";
+    function func1(){
+        document.getElementById("p1").innerHTML = "Terveysliikunta ja kuntoa kohottava liikunta ovat erityisen tärkeitä ikääntyville, sillä ne hidastavat muutoksia, joista pääset lukemaan otsikon 'Ikääntymisen vaikutukset kehoon' alta."+'<br>'+'<br>'+"Kehon rappeutumisen hidastumisen lisäksi, liikunta auttaa tunnetusti ehkäisemään aivojen – ja hermoston toimintaan vaikuttavia sairauksia ja tiloja, esim. muistisairauksia ja kärttyisyyttä. Ikääntyessä myös kehon aineen vaihdunta hidastuu, jolloin paino saattaa nousta rasvan kertymisen myötä. Vaikka terve määrä rasvaa kehossa on senioreille tärkeää, sen liiallinen esiintyminen kehossa altistaa sairauksille. Säännöllinen liikunta auttaa painon pysymistä terveellisenä ja sinulle edullisena.";
     }
-    function testi1(){
-        document.getElementById("p1").innerHTML = "New text";
+    function func2(){
+        document.getElementById("p1").innerHTML = "Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö heikkenee ja surkastuu nopeammin iän lisääntyessä, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset vaikuttavat kehossa seuraavilla tavoilla:"+
+        '<br>'+'<li>'+
+            '<ul>'+"Lihasmassan kato"+'</ul>'+
+            '<ul>'+"Aerobisen (kestävyys) kunnon heikkeneminen"+'</ul>'+
+            '<ul>'+"Tasapainon heikkeneminen"+'</ul>'+
+            '<ul>'+"Liikkuvuuden (notkeuden) pienentyminen."+'</ul>'+
+            '<ul>'+"Luuston heikkeneminen."+'</ul>'+
+            '</li>'+"Lihasmassan katoaminen kiihtyy 50 ikävuodesta ylöspäin. Massan lisäksi voima ja kyky nopeisiin suorituksiin heikkenevät. Samalla aerobinen kestävyys alenee, sillä keuhkojen hapenottokyky surkastuu. Tasapainon heikkenemiseen vaikuttaa lihasmassan kadon lisäksi muutokset hermoston toiminnassa, joka ylläpitää korvassa sijaitsevaa tasapainoelintä. Liikkuvuuden pienenemiseen voivat vaikuttaa esimerkiksi luuston epämuodostumat, lihasten heikkous, jänteien lyhentyminen ja kudoksen kimmoisuuden vähentyminen. <br>Näin lueteltuna muutokset kuulostavat melko kauhistuttavilta, mutta positiivinen uutinen on se, että niihin kaikkiin voi vaikuttaa merkittävästi omalla liikkumisella, ravitsemuksella ja levolla.";
     }
     function testi2(){
         document.getElementById("p1").innerHTML = "New !";
