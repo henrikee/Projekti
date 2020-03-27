@@ -6,83 +6,84 @@
     <link rel="stylesheet" href="info.css">
 </head>
 <body>
-    <h2>Tervetuloa tietopankkiin! Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
-    <h3>Vie hiiri otsikon päälle lukeaksesi vinkkejä.</h3>
+    <header>
+    <h1>Tervetuloa tietopankkiin!</h1>
+    <h2>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
+    <h3>Klikkaa sivun vasemmalla puolella olevia linkkejä lukeaksesi vinkkejä!</h3>
+    <span id="date"></span>
+    </header>
     <section class="infot">
-        <div class="drop">
-            <div class="drop">
-                <h3>Miksi kannattaa liikkua?</h3>
-                    <div class="drop1">
-                        <p>Terveysliikunta ja kuntoa kohottava liikunta ovat erityisen tärkeitä ikääntyville, sillä ne hidastavat muutoksia, joista pääset lukemaan otsikon "Ikääntymisen vaikutukset kehoon" alta.<br><br>Kehon rappeutumisen hidastumisen lisäksi, liikunta auttaa tunnetusti ehkäisemään aivojen – ja hermoston toimintaan vaikuttavia sairauksia ja tiloja, esim. muistisairauksia ja kärttyisyyttä. Ikääntyessä myös kehon aineen vaihdunta hidastuu, jolloin paino saattaa nousta rasvan kertymisen myötä. Vaikka terve määrä rasvaa kehossa on senioreille tärkeää, sen liiallinen esiintyminen kehossa altistaa sairauksille. Säännöllinen liikunta auttaa painon pysymistä terveellisenä ja sinulle edullisena.</p>
-            </div>
-        </div>
-        <h3>Ikääntymisen vaikutukset kehoon.</h3>
-            <div class="drop1">
-                <p>Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö heikkenee ja surkastuu nopeammin iän lisääntyessä, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset vaikuttavat kehossa seuraavilla tavoilla:<br>
-                    <li>
-                        <ul>Lihasmassan kato</ul>
-                        <ul>Aerobisen (kestävyys) kunnon heikkeneminen</ul>
-                        <ul>Tasapainon heikkeneminen</ul>
-                        <ul>Liikkuvuuden (notkeuden) pienentyminen.</ul>
-                        <ul>Luuston heikkeneminen.</ul>
-                    </li><br>Lihasmassan katoaminen kiihtyy 50 ikävuodesta ylöspäin. Massan lisäksi voima ja kyky nopeisiin suorituksiin heikkenevät. Samalla aerobinen kestävyys alenee, sillä keuhkojen hapenottokyky surkastuu. Tasapainon heikkenemiseen vaikuttaa lihasmassan kadon lisäksi muutokset hermoston toiminnassa, joka ylläpitää korvassa sijaitsevaa tasapainoelintä. Liikkuvuuden pienenemiseen voivat vaikuttaa esimerkiksi luuston epämuodostumat, lihasten heikkous, jänteien lyhentyminen ja kudoksen kimmoisuuden vähentyminen. <br>Näin lueteltuna muutokset kuulostavat melko kauhistuttavilta, mutta positiivinen uutinen on se, että niihin kaikkiin voi vaikuttaa merkittävästi omalla liikkumisella, ravitsemuksella ja levolla.</p>
-            </div>
-        </div>
-    <div class="drop">
-        <h3>Mitä on terveysliikunta?</h3>
-            <div class="drop1">
-                <p>tähän tulee sisältöä REEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEEEEE EEEEEEEEEEEEEEE EEEEEEEEE EEEEEEEEE EEEEEEEEEEE</p>
-            </div>
+    <nav class="buttons">
+        <ul>
+        <li><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
+        <li><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
+        <li><button onclick="func3()">Liikuntasuositukset.</button></li>
+        <li><button onclick="func4()">Mitä on terveysliikunta?</button></li>
+        <li><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
+        </ul>
+    </nav>
+    <div>
+        <p id="p1">MIKSI KANNATTAA LIIKKUA?<br>Terveysliikunta ja kuntoa kohottava liikunta ovat erityisen tärkeitä ikääntyville, sillä ne hidastavat muutoksia, joista pääset lukemaan otsikon 'Ikääntymisen vaikutukset kehoon' alta. Kehon rappeutumisen hidastumisen lisäksi, liikunta auttaa tunnetusti ehkäisemään aivojen – ja hermoston toimintaan vaikuttavia sairauksia ja tiloja, esim. muistisairauksia ja kärttyisyyttä. Ikääntyessä myös kehon aineen vaihdunta hidastuu, jolloin paino saattaa nousta rasvan kertymisen myötä. Vaikka terve määrä rasvaa kehossa on senioreille tärkeää, sen liiallinen esiintyminen kehossa altistaa sairauksille. Säännöllinen liikunta auttaa painon pysymistä terveellisenä ja sinulle edullisena.</p>
+        <p id="p2">IKÄÄNTYMISEN VAIKUTUKSET KEHOON<br>
+            Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö heikkenee ja surkastuu nopeammin iän lisääntyessä, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset vaikuttavat kehossa seuraavilla tavoilla:<br>
+            <br>- Lihasmassaa katoaa.<br>
+                - Aerobinen (kestävyys) kunto heikkenee.<br>
+                - Tasapaino heikkenee.<br>
+                - Liikkuvuus (notkeus) pienenee.<br>
+                - Luuston heikkenee.<br><br>
+            Lihasmassan katoaminen kiihtyy 50 ikävuodesta ylöspäin. Massan lisäksi voima ja kyky nopeisiin suorituksiin heikkenevät. Samalla aerobinen kestävyys alenee, sillä keuhkojen hapenottokyky surkastuu. Tasapainon heikkenemiseen vaikuttaa lihasmassan kadon lisäksi muutokset hermoston toiminnassa, joka ylläpitää korvassa sijaitsevaa tasapainoelintä. Liikkuvuuden pienenemiseen voivat vaikuttaa esimerkiksi luuston epämuodostumat, lihasten heikkous, jänteien lyhentyminen ja kudoksen kimmoisuuden vähentyminen. <br>Näin lueteltuna muutokset kuulostavat melko kauhistuttavilta, mutta positiivinen uutinen on se, että niihin kaikkiin voi vaikuttaa merkittävästi omalla liikkumisella, ravitsemuksella ja levolla.
+        </p>
+        <p id="p3">LIIKUNTASUOSITUKSET<br>Reipasta liikkumista (terveysliikuntaa) suositellaan vähintään 2,5 tuntia viikossa. Tiedät liikkuvasi reippaasti, jos hengästyt hiukan, mutta pystyt kuitenkin puhumaan liikunnan aikana. Jos liikut raskaasti (kuntoa kohottava), viikottainen aika tulisi olla vähintään 1 tunti ja 15 minuuttia. Raskasta liikuntaa on sellainen, jossa tunnet sykkeesi nousevan huomattavasti, puhuminen on suorituksen aikana vaikeaa tai mahdotonta, etkä välttämättä jaksa tehdä sitä kerralla puoltatuntia pidempään.</p>
+        <p id="p4">terveysliikka :D</p>
+        <p id="p5">beast mode liikat</p>
     </div>
-    <div class="drop">
-        <h3>Mitä on kuntoa kohottava liikunta?</h3>
-            <div class="drop1">
-                <p>tähän tulee sisältöä</p>
-            </div>
-    </div>
-    <div class="drop">
-    <h3>Liikuntasuositukset</h3>
-        <div class="drop1">
-            <p>Reipasta liikkumista suositellaan vähintään 2,5 tuntia viikossa. Tiedät liikkuvasi reippaasti, jos hengästyt hiukan ja liikunta tuntuu jokseenkin kuormittavalta sen kestäessä vähintään 20 minuuttia. Jos Liikut raskaasti, viikottainen aika tulisi olla vähintään 1 tunti ja 15 minuuttia. Raskasta liikuntaa on sellainen, jossa tunnet sykkeesi nousevan huomattavasti etkä välttämättä jaksa tehdä sitä kerralla puoltatuntia pidempään.</p>
-        </div>
-    </div>
-    <button onclick="func1()">Miksi kannattaa liikkua?</button>
-    <p id="p1">lalallaaa</p>
-    <button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button>
-    <button onclick="testi2()">testi2</button>
-    <button onclick="testi3()">testi3</button>
-
 </section>
 
 <script>
+    var date = new Date();
+    document.getElementById("date").innerHTML = date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
+
     function func1(){
-        document.getElementById("p1").innerHTML = "Terveysliikunta ja kuntoa kohottava liikunta ovat erityisen tärkeitä ikääntyville, sillä ne hidastavat muutoksia, joista pääset lukemaan otsikon 'Ikääntymisen vaikutukset kehoon' alta."+'<br>'+'<br>'+"Kehon rappeutumisen hidastumisen lisäksi, liikunta auttaa tunnetusti ehkäisemään aivojen – ja hermoston toimintaan vaikuttavia sairauksia ja tiloja, esim. muistisairauksia ja kärttyisyyttä. Ikääntyessä myös kehon aineen vaihdunta hidastuu, jolloin paino saattaa nousta rasvan kertymisen myötä. Vaikka terve määrä rasvaa kehossa on senioreille tärkeää, sen liiallinen esiintyminen kehossa altistaa sairauksille. Säännöllinen liikunta auttaa painon pysymistä terveellisenä ja sinulle edullisena.";
-    }
-    function func2(){
-        document.getElementById("p1").innerHTML = "Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö heikkenee ja surkastuu nopeammin iän lisääntyessä, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset vaikuttavat kehossa seuraavilla tavoilla:"+
-        '<br>'+'<li>'+
-            '<ul>'+"Lihasmassan kato"+'</ul>'+
-            '<ul>'+"Aerobisen (kestävyys) kunnon heikkeneminen"+'</ul>'+
-            '<ul>'+"Tasapainon heikkeneminen"+'</ul>'+
-            '<ul>'+"Liikkuvuuden (notkeuden) pienentyminen."+'</ul>'+
-            '<ul>'+"Luuston heikkeneminen."+'</ul>'+
-            '</li>'+"Lihasmassan katoaminen kiihtyy 50 ikävuodesta ylöspäin. Massan lisäksi voima ja kyky nopeisiin suorituksiin heikkenevät. Samalla aerobinen kestävyys alenee, sillä keuhkojen hapenottokyky surkastuu. Tasapainon heikkenemiseen vaikuttaa lihasmassan kadon lisäksi muutokset hermoston toiminnassa, joka ylläpitää korvassa sijaitsevaa tasapainoelintä. Liikkuvuuden pienenemiseen voivat vaikuttaa esimerkiksi luuston epämuodostumat, lihasten heikkous, jänteien lyhentyminen ja kudoksen kimmoisuuden vähentyminen. <br>Näin lueteltuna muutokset kuulostavat melko kauhistuttavilta, mutta positiivinen uutinen on se, että niihin kaikkiin voi vaikuttaa merkittävästi omalla liikkumisella, ravitsemuksella ja levolla.";
-    }
-    function testi2(){
-        document.getElementById("p1").innerHTML = "New !";
-    }
-    function testi3(){
-        document.getElementById("p1").innerHTML = "Nt!";
-    }
-   
-    function reveal(){
-        var x = document.querySelectorAll(".text");
-        if(x.style.display === "none"){
-            x.style.display = "block";
+        var x = document.getElementById("p1");
+        if (x.style.display === "none") {
+        x.style.display = "block";
         }else{
-            x.style.display = "none";
+        x.style.display = "none";
         }
     }
+    function func2(){
+        var x = document.getElementById("p2");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        }else{
+        x.style.display = "none";
+        }
+    }
+    function func3(){
+        var x = document.getElementById("p3");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        }else{
+        x.style.display = "none";
+        }
+    }
+    function func4(){
+        var x = document.getElementById("p4");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        }else{
+        x.style.display = "none";
+        }
+    }
+    function func5(){
+        var x = document.getElementById("p5");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        }else{
+        x.style.display = "none";
+        }
+    }
+
 </script>
 </body>
 </html>
