@@ -3,16 +3,17 @@
 <head>
     <title>Tietopankki</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="info.css">
 </head>
 <body>
+    <span id="date"></span>
     <header>
     <h1>Tervetuloa tietopankkiin!</h1>
     <h2>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
     <h3>Klikkaa sivun vasemmalla puolella olevia linkkejä lukeaksesi vinkkejä!</h3>
-    <span id="date"></span>
     </header>
-    <section class="infot">
+    <section>
     <nav class="buttons">
         <ul>
         <li><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
@@ -39,51 +40,6 @@
     </div>
 </section>
 
-<script>
-    var date = new Date();
-    document.getElementById("date").innerHTML = date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
-
-    function func1(){
-        var x = document.getElementById("p1");
-        if (x.style.display === "none") {
-        x.style.display = "block";
-        }else{
-        x.style.display = "none";
-        }
-    }
-    function func2(){
-        var x = document.getElementById("p2");
-        if (x.style.display === "none") {
-        x.style.display = "block";
-        }else{
-        x.style.display = "none";
-        }
-    }
-    function func3(){
-        var x = document.getElementById("p3");
-        if (x.style.display === "none") {
-        x.style.display = "block";
-        }else{
-        x.style.display = "none";
-        }
-    }
-    function func4(){
-        var x = document.getElementById("p4");
-        if (x.style.display === "none") {
-        x.style.display = "block";
-        }else{
-        x.style.display = "none";
-        }
-    }
-    function func5(){
-        var x = document.getElementById("p5");
-        if (x.style.display === "none") {
-        x.style.display = "block";
-        }else{
-        x.style.display = "none";
-        }
-    }
-
-</script>
+<script type="text/javascript" src="info.js"></script>
 </body>
 </html>

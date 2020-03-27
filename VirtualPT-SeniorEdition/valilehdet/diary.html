@@ -3,15 +3,22 @@
 <head>
     <title>Päiväkirja</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="diary.css">
 </head>
 <body>
-    <nav>   
-        <a href="homepage.html">Kotisivu</a>
-        <a href="#">Päiväkirja</a>
-        <a href="exersice.html">Liikunta</a>
-        <a href="info.html">Tietopankki</a>
-        <a href="logout.php">Kirjaudu ulos</a>
-    </nav>
+<span id="date"></span>
+<header>
+    <h1>Päiväkirja</h1>
+    <h3>Klikkaa "Kirjoita päiväkirjaan" nappia tehdäksesi uuden merkinnän.</h3>
+    <h3>Paina "Lue päiväkirjaa" nappia tarkastellaksesi aikaisempia merkintöjä.</h3>
+</header>
+<nav>
+    <button id="write">Kirjoita päiväkirjaan</button>
+    <button id="read">Lue päiväkirjaa</button>
+</nav>
+<script>
+    var date = new Date();
+    document.getElementById("date").innerHTML = "Tänään on "+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
+</script>
 </body>
 </html>
