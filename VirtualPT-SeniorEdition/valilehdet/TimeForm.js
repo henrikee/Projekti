@@ -26,7 +26,7 @@ TimeForm.prototype.drawContent = function ()
 	
 	// create a text-area for the item subject
 	var textArea = this.createTextArea({ id: "subject", initValue: this.item.subject, events: { keydown: this._areaKeyDown} });
-	textArea.element.style.width = "200px";
+	textArea.element.style.width = "13rem";
 	this.addControl(textArea);
 
 	row = this.row();
@@ -35,11 +35,11 @@ TimeForm.prototype.drawContent = function ()
 
 	// create a drop-down list for start hours
 	row = this.row();
-	row.innerHTML = "Start Time";
+	row.innerHTML = "Alkaa klo:";
 	content.appendChild(row);
 
 	var control = this.createDropDownList({ id: "start_time", items: this.getHourLabels(), initValue: this.getStartTimeIndex(), addEmptyValue: false });
-	control.element.style.width = "200px";
+	control.element.style.width = "13rem";
 	this.addControl(control);
 
 	row = this.row();
@@ -48,16 +48,16 @@ TimeForm.prototype.drawContent = function ()
 
 	// create a drop-down list for end time
 	row = this.row();
-	row.innerHTML = "End Time";
+	row.innerHTML = "Loppuu klo:";
 	content.appendChild(row);
 
 	var item = this.item;
 	control = this.createDropDownList({ id: "end_time", items: hoursList, initValue: this.getEndTimeIndex(),  addEmptyValue: false});
-	control.element.style.width = "200px";
+	control.element.style.width = "13rem";
 	this.addControl(control);
 
 	row = this.row();
-	row.style.margin = "0px 0px 30px 0px";
+	row.style.margin = "0rem 0rem 2rem 0rem";
 	row.appendChild(control.element);
 	content.appendChild(row);
 	
@@ -68,29 +68,29 @@ TimeForm.prototype.drawContent = function ()
 TimeForm.prototype.getHourLabels = function ()
 {
 	hoursList = [];
-	hoursList.push({ value: 0, text: "12:00am" });
-	hoursList.push({ value: 1, text: "12:30am" });
+	hoursList.push({ value: 0, text: "00:00" });
+	hoursList.push({ value: 1, text: "00:30" });
 	
 	let index = 1;
 	
 	for(var i = 1; i < 12; i++)
 	{
-		hoursList.push({ value: index+1, text: i.toString() + ":00am" });
-	    hoursList.push({ value: index+2, text: i.toString() + ":30am" });
+		hoursList.push({ value: index+1, text: i.toString() + ":00" });
+	    hoursList.push({ value: index+2, text: i.toString() + ":30" });
 		
 		index += 2;
 	}
 	
 	//add the first afternnon hours
-	hoursList.push({ value: index + 1, text: "12:00pm" });
-	hoursList.push({ value: index + 2, text: "12:30pm" });
+	hoursList.push({ value: index + 1, text: "12:00" });
+	hoursList.push({ value: index + 2, text: "12:30" });
 	
 	index += 2;
 	
-	for(i = 1; i < 12; i++)
+	for(i = 12; i < 24; i++)
 	{
-		hoursList.push({ value: index+1, text: i.toString() + ":00pm" });
-	    hoursList.push({ value: index+2, text: i.toString() + ":30pm" });
+		hoursList.push({ value: index+1, text: i.toString() + ":00" });
+	    hoursList.push({ value: index+2, text: i.toString() + ":30" });
 		
 		index += 2;
 	}	
