@@ -84,6 +84,7 @@ a.active,a:hover{
     transition: .5s;
 }
 .checkbtn{
+    margin-top:25px;
     font-size: 30px;
     color:white;
     float: right;
