@@ -1,5 +1,6 @@
 <?php
 include("includes/navSignup.php");
+include("includes/header.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,17 +64,14 @@ if(isset($_POST['submitUser'])){
   }
   
   
-  
-  //Testataan pääsivulle paluu
 
-  //Palataan pääsivulle jos tallennus onnistui -kesken
   
 
 //Luovutetaanko ja palataan takaisin pääsivulle alkutilanteeseen
 if(isset($_POST['submitBack'])){
   session_unset();
   session_destroy();
-  header("Location: index.php");
+  header("Location: signup.php");
 }
 
 }

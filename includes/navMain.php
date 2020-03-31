@@ -12,4 +12,7 @@
             <li><a href="#">Tietopankki</a></li>
             <li><a href="logOutUser.php">Kirjaudu ulos</a></li>
         </ul>
-    </nav> 
+        <?php
+        echo("<p>** User: " .$_SESSION['suserName']. " " . $_SESSION['suserEmail']);
+        ?>
+</nav> 
