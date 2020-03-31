@@ -81,7 +81,7 @@ TimeForm.prototype.getHourLabels = function ()
 		index += 2;
 	}
 	
-	//add the first afternnon hours
+	//add the first afternnon hours, edited from 12h to 24h 
 	hoursList.push({ value: index + 1, text: "12:00" });
 	hoursList.push({ value: index + 2, text: "12:30" });
 	
@@ -162,10 +162,21 @@ TimeForm.prototype.drawButtons = function ()
 		}
 	});
 
+	//delete
+	var btnDelete = this.createButton({
+		id: "btnDelete",
+		text: this.localInfo.deleteButtonCaption,
+		events: { "click": function click(e){
+			return thisObj.onDeleteButtonClick(e);
+		}}
+	});
+
 	var buttons = this.row();
 	buttons.classList.add("mfp-buttons-row");
 	buttons.appendChild(btnSave.element);
 	buttons.appendChild(btnCancel.element);
+	//delete
+	buttons.appendChild(btnDelete.element);
 
 	return buttons;
 };
