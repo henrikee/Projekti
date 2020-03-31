@@ -1,5 +1,6 @@
 <?php
 include("includes/navSignup.php");
+include("includes/header.php");
 ?>
 
 <!DOCTYPE html>
