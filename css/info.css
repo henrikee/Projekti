@@ -81,6 +81,13 @@ p{
     z-index: 1;
     word-spacing: 5px;
 }
+img{
+    width: 75%;
+    border-radius: 5px;
+    max-height: 90%;
+    margin-left: 12.5%;
+    justify-content: center;
+}
 
 
 
