@@ -7,9 +7,9 @@
         <label class="logo">Virtual PT</label>
         <ul>
             <li><a href="#">Etusivu</a></li>
-            <li><a href="../html/diary.php">Päiväkirja</a></li>
-            <li><a href="">Liikunta</a></li>
-            <li><a class="active" href="#">Tietopankki</a></li>
+            <li><a href="../REEE/diary.php">Päiväkirja</a></li>
+            <li><a href="#">Liikunta</a></li>
+            <li><a class="active" href="../REEE/info.php">Tietopankki</a></li>
             <li><a href="logOutUser.php">Kirjaudu ulos</a></li>
         </ul>
         <?php
