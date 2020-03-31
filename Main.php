@@ -1,6 +1,6 @@
 <?php
-include("includes/navMain.php");
-include("includes/header.php");
+include("../includes/navMain.php");
+include("../includes/header.php");
 
 ?>
 <!DOCTYPE html>
