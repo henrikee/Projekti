@@ -6,8 +6,7 @@ session_start();
 <!DOCTYPE html> 
 <html  lang="fi-FI">
 <head>
-<title> Jenkins</title>
+<title>Leeerooy Jeeennkins</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>

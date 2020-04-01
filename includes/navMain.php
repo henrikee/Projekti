@@ -6,7 +6,7 @@
         </label>
         <label class="logo">Virtual PT</label>
         <ul>
-            <li><a class="active" href="Main.php">Etusivu</a></li>
+            <li><a href="Main.php">Etusivu</a></li>
             <li><a href="diary.php">Päiväkirja</a></li>
             <li><a href="https://www.hs.fi">Liikunta</a></li>
             <li><a href="info.php">Tietopankki</a></li>

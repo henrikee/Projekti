@@ -9,7 +9,7 @@ include("includes/header.php");
 <head>
     <title>Päiväkirja</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/diary1.css">
+    <link rel="stylesheet" href="css/diary.css">
 </head>
 <body>
 <span id="date"></span>
@@ -18,7 +18,7 @@ include("includes/header.php");
     <h3>Klikkaa "Tee merkintä" nappia tehdäksesi uuden merkinnän.</h3>
     <h3>Paina "Avaa kalenteri" nappia tarkastellaksesi aikaisempia merkintöjä.</h3>
 </header>
-<nav>
+<nav id="buttons">
     <button id="write">Tee merkintä</button>
     <button onclick="openCalendar()" id="read">Avaa kalenteri</button>
 </nav>
@@ -62,7 +62,7 @@ include("includes/header.php");
     xhttp.send();
     }
 </script>
-<a href="http://MindFusion.Scheduling.js">http://MindFusion.Scheduling.js</a>
-<a href="http://GoogleSchedule.js">http://GoogleSchedule.js</a>
+<a id="link" href="http://MindFusion.Scheduling.js">http://MindFusion.Scheduling.js</a>
+<a id= "link" href="http://GoogleSchedule.js">http://GoogleSchedule.js</a>
 </body>
 </html>
