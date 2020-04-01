@@ -1,6 +1,6 @@
 <?php
-include("../includes/navDiary.php");
-include("../includes/header.php");
+include("includes/navMain.php");
+include("includes/header.php");
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -9,7 +9,7 @@ include("../includes/header.php");
 <head>
     <title>Päiväkirja</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/diary.css">
+    <link rel="stylesheet" href="../css/diary1.css">
 </head>
 <body>
 <span id="date"></span>

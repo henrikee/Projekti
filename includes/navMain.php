@@ -6,13 +6,10 @@
         </label>
         <label class="logo">Virtual PT</label>
         <ul>
-            <li><a class="active" href="#">Etusivu</a></li>
-            <li><a href="#">Päiväkirja</a></li>
-            <li><a href="#">Liikunta</a></li>
-            <li><a href="#">Tietopankki</a></li>
+            <li><a class="active" href="Main.php">Etusivu</a></li>
+            <li><a href="diary.php">Päiväkirja</a></li>
+            <li><a href="https://www.hs.fi">Liikunta</a></li>
+            <li><a href="info.php">Tietopankki</a></li>
             <li><a href="logOutUser.php">Kirjaudu ulos</a></li>
         </ul>
-        <?php
-        echo("<p>** User: " .$_SESSION['suserName']. " " . $_SESSION['suserEmail']);
-        ?>
 </nav> 
