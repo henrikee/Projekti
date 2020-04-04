@@ -142,6 +142,7 @@ a.active,a:hover{
         left: 0;
     
     }
+}
 
 /**CALENDAR: **/
 
@@ -685,5 +686,4 @@ a.active,a:hover{
 .mfp-week-view.light .mfp-content .mfp-wrap .mfp-week.bottom .mfp-bg-row
 {
     border-bottom: 1px solid #d4d4d4;
-}
 }
