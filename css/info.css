@@ -63,7 +63,7 @@ div{
     span{
         font-size: smaller;
     }
-    nav{
+    #buttons{
         margin-right: 5%;
     }
   }
@@ -102,11 +102,11 @@ img{
     background-repeat: no-repeat;
     background-size: 275vh; 
 }**/
-/**nav{
+nav{
     background-color:orange;
     height: 80px;   
     width: 100%;
-}**/
+}
 label.logo{
     color: white;
     font-size: 35px;
