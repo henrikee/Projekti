@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("../img/happyseniors.jpg");
@@ -6,14 +13,19 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+header{
+    margin: auto;
+    text-align: center;
+}
+nav{
+    background-color:orange;
+    height: 80px;   
+    width: 100%;
+}
 h1,h2,h3,span{
     color: white;
     clear: both;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
-}
-header{
-    margin: auto;
-    text-align: center;
 }
 span{
     justify-content: center;
@@ -28,6 +40,7 @@ span{
     float: left;
     flex-direction: column;
     justify-content: left;
+    background-color:rgba(0,0,0,0.0);
 }
 #buttonslist{
     list-style-type: none;
@@ -59,6 +72,19 @@ div{
     min-width: 7rem;
     max-width: 50%;
 }
+.checkbtn{
+    margin-top: 25px;
+    font-size: 30px;
+    color:white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
 @media only screen and (max-width: 60rem) {
     span{
         font-size: smaller;
@@ -86,26 +112,6 @@ img{
     max-height: 90%;
     margin-left: 12.5%;
     justify-content: center;
-}
-
-/**NAV:**/
-/**{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-/**body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 275vh; 
-}**/
-nav{
-    background-color:orange;
-    height: 80px;   
-    width: 100%;
 }
 label.logo{
     color: white;
