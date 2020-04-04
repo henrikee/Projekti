@@ -7,7 +7,7 @@ var TimeForm = function (calendar, item, type)
 
 	this._id = "TimeForm";
 	this._type = type;
-	this.headerText = "Appointment";
+	this.headerText = "Tapahtuma";
 	
 }
 
@@ -64,7 +64,7 @@ TimeForm.prototype.drawContent = function ()
 	return content;
 };
 
-// create an array of objects to fill the hours drop-down
+// create an array of objects to fill the hours drop-down, edited 12h->24h
 TimeForm.prototype.getHourLabels = function ()
 {
 	hoursList = [];
@@ -81,7 +81,7 @@ TimeForm.prototype.getHourLabels = function ()
 		index += 2;
 	}
 	
-	//add the first afternnon hours, edited from 12h to 24h 
+	//add the first afternnon hours, edited 12h->24h 
 	hoursList.push({ value: index + 1, text: "12:00" });
 	hoursList.push({ value: index + 2, text: "12:30" });
 	
@@ -219,6 +219,15 @@ TimeForm.prototype.onCancelButtonClick = function (e)
 {
 	// close the form
 	this.closeForm();
+};
+
+//delete ---EI TOIMI???
+TimeForm.prototype.onDeleteButtonClick = function (e)
+{
+	// close the form
+	this.removeForm();
+
+	this.calendar.repaint(true);
 };
 
 

@@ -9,7 +9,7 @@ include("includes/header.php");
     <title>Tietopankki</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="css/info.css">
 </head>
 <body>
     <span id="date"></span>
@@ -19,17 +19,15 @@ include("includes/header.php");
     <h3>Klikkaa sivun vasemmalla puolella olevia linkkejä lukeaksesi vinkkejä!</h3>
     </header>
     <section>
-    <nav class="buttons">
-        <ul>
-        <li><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
-        <li><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
-        <li><button onclick="func3()">Liikuntasuositukset.</button></li>
-        <li><button onclick="func4()">Mitä on terveysliikunta?</button></li>
-        <li><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
-        <li><button onclick="func6()">Mistä ja miten aloittaa liikunta?</button></li>
-        </ul>
-    </nav>
-    <div>
+    <div id="buttons">
+        <button onclick="func1()">Miksi kannattaa liikkua?</button>
+        <button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button>
+        <button onclick="func3()">Liikuntasuositukset.</button>
+        <button onclick="func4()">Mitä on terveysliikunta?</button>
+        <button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button>
+        <button onclick="func6()">Mistä ja miten aloittaa liikunta?</button>
+    </div>
+    <div id="info">
         <p id="p1">MIKSI KANNATTAA LIIKKUA?<br>Terveysliikunta ja kuntoa kohottava liikunta ovat erityisen tärkeitä ikääntyville, sillä ne hidastavat muutoksia, joista pääset lukemaan otsikon 'Ikääntymisen vaikutukset kehoon' alta. Kehon rappeutumisen hidastumisen lisäksi, liikunta auttaa tunnetusti ehkäisemään aivojen – ja hermoston toimintaan vaikuttavia sairauksia ja tiloja, esim. muistisairauksia ja kärttyisyyttä. Ikääntyessä myös kehon aineen vaihdunta hidastuu, jolloin paino saattaa nousta rasvan kertymisen myötä. Vaikka terve määrä rasvaa kehossa on senioreille tärkeää, sen liiallinen esiintyminen kehossa altistaa sairauksille. Säännöllinen liikunta auttaa painon pysymistä terveellisenä ja sinulle edullisena.</p>
         <p id="p2">IKÄÄNTYMISEN VAIKUTUKSET KEHOON<br>
             Iän lisääntyessä elimistön toiminnot ja solujen uusiutuvuus hidastuvat. Toisin sanoen elimistö heikkenee ja surkastuu nopeammin iän lisääntyessä, jos siitä ei pidä hyvää huolta. Iän tuomat surkastumiset vaikuttavat kehossa seuraavilla tavoilla:<br>
@@ -76,6 +74,6 @@ include("includes/header.php");
     </div>
 </section>
 
-<script type="text/javascript" src="../js/info.js"></script>
+<script type="text/javascript" src="js/info.js"></script>
 </body>
 </html>
