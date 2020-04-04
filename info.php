@@ -15,19 +15,19 @@ include("includes/header.php");
 <body>
     <span id="date"></span>
     <header>
-    <h1>Tervetuloa tietopankkiin!</h1>
-    <h2>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
+    <h1>Tietopankki</h1>
+    <h3>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h3>
     <h3>Klikkaa sivun vasemmalla puolella olevia linkkejä lukeaksesi vinkkejä!</h3>
     </header>
     <section>
     <nav id="buttons">
         <ul id="buttonslist">
-            <li class="button"><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
-            <li class="button"><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
-            <li class="button"><button onclick="func3()">Liikuntasuositukset.</button></li>
-            <li class="button"><button onclick="func4()">Mitä on terveysliikunta?</button></li>
-            <li class="button"><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
-            <li class="button"><button onclick="func6()">Mistä ja miten aloittaa liikunta?</button></li>
+            <li><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
+            <li><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
+            <li><button onclick="func3()">Liikuntasuositukset.</button></li>
+            <li><button onclick="func4()">Mitä on terveysliikunta?</button></li>
+            <li><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
+            <li><button onclick="func6()">Mistä ja miten aloittaa liikunta?</button></li>
         </ul>
     </nav>
     <div id="info">

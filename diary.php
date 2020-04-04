@@ -17,15 +17,17 @@ include("includes/header.php");
 <header>
     <h1>Päiväkirja</h1>
     <h3>Tee merkintä kalenteriin painamalla halutusta päivästä.</h3>
-    <h3></h3>
 </header>
-
-<div id="calendar" style="position: absolute; width: 80%; height: 60%;"></div>
-
+<section>
+<div id="calendar" style="position: absolute; width: 70%; height: 60%;"></div>
+</section>
 <script src="js/MindFusion.Scheduling.js" type="text/javascript"></script>
 <script src="js/GoogleSchedule.js" type="text/javascript"></script>
 <script src="js/TimeForm.js" type="text/javascript"></script>
 <script>
+    var date = new Date();
+    document.getElementById("date").innerHTML = "Tänään on "+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
+    
 
 //avaa kalenteri
   //  function openCalendar(){
@@ -36,9 +38,6 @@ include("includes/header.php");
   //      x.style.display = "none";
   //      }
   //  }
-
-    var date = new Date();
-    document.getElementById("date").innerHTML = "Tänään on "+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
 
 //???olisiko tämä funktio mitä käytetään päiväkirjamerkintöjen etsimiseen????
 //getDiaryEntry.php tekemättä -> vaatii databasen
