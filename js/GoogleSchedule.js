@@ -9,8 +9,8 @@ calendar.theme = "light";
 
 //add the start time prefix before each subject
 calendar.itemSettings.titleFormat = "%s[hh:mm tt] %h";
-calendar.selectionEnd.addEventListener(handleSelectionDoubleClick);
-calendar.headerClick.addEventListener(handleHeaderClick);
+//calendar.selectionEnd.addEventListener(handleSelectionDoubleClick);
+//calendar.headerClick.addEventListener(handleHeaderClick);
 
 //visualize the calendar
 calendar.render();

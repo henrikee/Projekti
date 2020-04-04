@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../img/suutujo.jpg");
+    background-image: url("../img/yogamama.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,14 +9,19 @@ body{
 h1,h2,h3,span{
     color: white;
     clear: both;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
 header{
     margin: auto;
     text-align: center;
 }
-h1,h2,h3{
-    margin: 5%;
+h1,h3{
+    margin: 2%;
+    letter-spacing: 1px;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 span{
     justify-content: center;
@@ -25,16 +30,10 @@ span{
     margin-right: 1%;
     margin-top: 1%;
 }
-@media only screen and (max-width: 60rem) {
-    span{
-        font-size: smaller;
-    }
-    #buttons{
-        margin-right: 5%;
-    }
-  }
 #calendar{
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 20%;
     border: groove rgba(255, 162, 27, 0.5);
     border-radius: 0.5rem;
 }
@@ -42,26 +41,24 @@ span{
     display: none;
 }
 
-
 /**NAV:**/
-/**{
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
-/**body{
+body{
     font-family: Arial, Helvetica, sans-serif;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 275vh; 
-}**/
-/**nav{
+}
+nav{
     background-color:orange;
     height: 80px;   
     width: 100%;
-}**/
+}
 label.logo{
     color: white;
     font-size: 35px;
@@ -140,7 +137,9 @@ a.active,a:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    
+    }
+    span{
+        font-size: smaller;
     }
 }
 
@@ -311,7 +310,7 @@ a.active,a:hover{
 .mfp-list-view.light .mfp-header
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.5);
     border-bottom:1px solid #d4d4d4;
 }
 .mfp-list-view.light .mfp-header .mfp-button
@@ -321,14 +320,14 @@ a.active,a:hover{
 .mfp-list-view.light .mfp-header-group
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.5);
     text-align: center;
     vertical-align: middle;
     width:50px;
 }
 .mfp-list-view.light .mfp-bg-cell-header
 {
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
     color: #747474;
 }
 .mfp-list-view.light .mfp-content .mfp-wrap .mfp-bg-row .mfp-bg-cell
@@ -455,7 +454,7 @@ a.active,a:hover{
 .mfp-vertical-list-view.light .mfp-header
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
 }
 .mfp-vertical-list-view.light .mfp-header .mfp-button
 {
@@ -464,12 +463,12 @@ a.active,a:hover{
 .mfp-vertical-list-view.light .mfp-header-group
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
     height:50px;    
 }
 .mfp-vertical-list-view.light .mfp-bg-cell-header
 {
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
     color: #747474;
 }
 .mfp-vertical-list-view.light .mfp-content .mfp-wrap .mfp-bg-table .mfp-bg-cell
@@ -514,7 +513,7 @@ a.active,a:hover{
 .mfp-month-view.light .mfp-header-weeknumbers .mfp-weeknumbers
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.5);
     text-align: center;
     border-right: 1px solid #d4d4d4;
 }
@@ -551,7 +550,7 @@ a.active,a:hover{
 .mfp-resource-view.light .mfp-header
 {
     color: #747474;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
     border-color:#d4d4d4;
 }
 .mfp-resource-view.light .mfp-header-group-wrap
@@ -562,7 +561,7 @@ a.active,a:hover{
 {
     color: #747474;
     border-color:#d4d4d4;
-    background-color: #fff;
+    background-color:rgba(255,165,0,0.4);
     text-align: center;
     vertical-align: middle;
 }

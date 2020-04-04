@@ -8,7 +8,7 @@
         <ul>
             <li><a href="Main.php">Etusivu</a></li>
             <li><a href="diary.php">Päiväkirja</a></li>
-            <li><a href="https://www.hs.fi">Liikunta</a></li>
+            <li><a href="exersice.php">Liikunta</a></li>
             <li><a href="info.php">Tietopankki</a></li>
             <li><a href="logOutUser.php">Kirjaudu ulos</a></li>
         </ul>

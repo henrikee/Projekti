@@ -15,19 +15,19 @@ include("includes/header.php");
 <body>
     <span id="date"></span>
     <header>
-    <h1>Tervetuloa tietopankkiin!</h1>
-    <h2>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h2>
+    <h1>Tietopankki</h1>
+    <h3>Täältä löydät tietoa liikunnan määrästä, kuormittavuudesta ja terveyshyödyistä.</h3>
     <h3>Klikkaa sivun vasemmalla puolella olevia linkkejä lukeaksesi vinkkejä!</h3>
     </header>
     <section>
     <nav id="buttons">
         <ul id="buttonslist">
-            <li class="button"><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
-            <li class="button"><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
-            <li class="button"><button onclick="func3()">Liikuntasuositukset.</button></li>
-            <li class="button"><button onclick="func4()">Mitä on terveysliikunta?</button></li>
-            <li class="button"><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
-            <li class="button"><button onclick="func6()">Mistä ja miten aloittaa liikunta?</button></li>
+            <li><button onclick="func1()">Miksi kannattaa liikkua?</button></li>
+            <li><button onclick="func2()">Ikääntymisen vaikutukset kehoon.</button></li>
+            <li><button onclick="func3()">Liikuntasuositukset.</button></li>
+            <li><button onclick="func4()">Mitä on terveysliikunta?</button></li>
+            <li><button onclick="func5()">Mitä on kuntoa kohottava liikunta?</button></li>
+            <li><button onclick="func6()">Mistä ja miten aloittaa liikunta?</button></li>
         </ul>
     </nav>
     <div id="info">
@@ -46,7 +46,7 @@ include("includes/header.php");
             Reipasta liikkumista (terveysliikuntaa) suositellaan vähintään 2,5 tuntia viikossa. Tiedät liikkuvasi reippaasti, jos hengästyt hiukan, mutta pystyt kuitenkin puhumaan liikunnan aikana. Jos liikut raskaasti (kuntoa kohottava), viikottainen aika tulisi olla vähintään 1 tunti ja 15 minuuttia. Raskasta liikuntaa on sellainen, jossa tunnet sykkeesi nousevan huomattavasti ja olet niin hengästynyt, että puhuminen on suorituksen aikana vaikeaa tai mahdotonta.<br>
             Näitä liikuntamuotoja voi myös sekoittaa, niin, että liikut esim. kerran viikossa raskaasti 15 minuuttia ja kolmesti viikossa reippaasti 40 minuuttia.<br>
             Jos olet vasta-alkaja, älä yritä heti päästä näihin lukemiin vaan aloita rauhallisesti ja pyri kohti suositusten mukaisia määriä. Liian raskas aloittaminen aiheuttaa kehoon ikäviä kiputiloja ja altistaa loukkaantumisille.<br><br>
-            <img src="../img/reco.png" alt="Liikuntasuositukset"><br>
+            <img src="img/reco.png" alt="Liikuntasuositukset"><br>
             Kuva 1. Liikuntasuositukset pyramidikaaviossa.
             </p>
         <p id="p4">terveysliikka :D</p>
