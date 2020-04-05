@@ -13,6 +13,7 @@ include("includes/header.php");
     <title>Document</title>
 </head>
 <body>
+    <h1>Yhteystiedot</h1>
     <section>
    <div class="boxPerson">
         <h2>Scrum Master</h2>
