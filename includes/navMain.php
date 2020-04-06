@@ -1,4 +1,5 @@
 <!-- Luodaan nav html johon laitoin linkit, otsikon sekä burgerin(auttaa skaalaamisessa) -->
+<!-- Inserting navigation bar links and burger (helps with the rendering) -->
 <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
