@@ -9,9 +9,9 @@
   Salasana
   <br />  <input type="password" name="givenPassword" placeholder="password min 8 chars" maxlength="40"/>
   </p><p>
-  <br />  <input class="btn" type="submit" name="submitUser" value="Kirjaudu"/>
-          <input class="btn" type="reset"  value="Resetoi"/>
-          <input class="btn" type="submit" name="submitBack" value="Luovuta"/>
+  <br />  <button class="btn" type="submit" name="submitUser" value="Kirjaudu">Kirjaudu</button>
+          <button class="btn" type="reset"  value="Resetoi">Tyhjennä</button>
+          <button class="btn" type="submit" name="submitBack" value="Luovuta">Peruuta</button>
   </p>
 </form>
 </fieldset>

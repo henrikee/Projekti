@@ -17,10 +17,22 @@ include("includes/header.php");
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Document</title>
 </head>
-
 <body>
-
-
+    <div class="card">
+        <h3>Päiväkirja aktiivisuuden seurantaan.</h3>
+        <p>nönnönnööö</p>
+        <a class="button" href="diary.php">Näe lisää...</a>
+    </div>
+    <div class="card">
+        <h3>Ideoita liikkumiseen ja harjoitteluun.</h3>
+        <p>setit tähä</p>
+        <a class="button" href="exersice.php">Näe lisää...</a>
+    </div>
+    <div class="card">
+        <h3>Aktiivinen seniori on terve seniori, mutta miksi?</h3>
+        <p>päläpäläpälä</p>
+        <a class="button" href="info.php">Näe lisää...</a>
+    </div>
 </body>
 
 </html>
