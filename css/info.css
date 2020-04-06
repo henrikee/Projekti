@@ -13,6 +13,11 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+label{
+    padding: 1%;
+    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
+    letter-spacing: 1px;
+}
 header{
     z-index: 1;
     width: 100%;
