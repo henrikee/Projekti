@@ -14,7 +14,6 @@ body{
     background-attachment: fixed;
 }
 header{
-    z-index: 1;
     width: 100%;
     text-align: center;
 }
@@ -31,6 +30,9 @@ h1,h3,span{
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
 h1{
+    align-items: center;
+    position: fixed;
+    z-index: 1;
     margin-top: 7rem;
     text-transform: uppercase;
     font-weight: lighter;
