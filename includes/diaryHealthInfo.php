@@ -1,5 +1,6 @@
 <?php
 include("header.php");  //yhteysolio
+include("forms/healthForm.php");
 include_once("functions/healthyCalculator.php");
 ?>
 <!doctype html>
@@ -7,17 +8,12 @@ include_once("functions/healthyCalculator.php");
 <html lang="en">
 <head>
 <title>Terveystietolomake</title>
-<link rel="stylesheet" type="text/css" href="../css/diary.css">
 <meta charset="UTF-8"/>
 </head>
 <body>
     <div></div>
 
 <?php
-//Avataan terveystietolomake painamalla nappia
-    if(isset($_GET['buttonFillHealthInfo'])){
-        include("forms/healthForm.php");
-    }
     //Tallennetaanko terveystiedot
     if(isset($_POST['submitHealthydata'])){
         if($_POST['givenAge'] > 64 && $_POST['givenHeight'] > 50 && $_POST['givenHeight'] <= 250 && $_POST['givenWeight'] >= 4.5 && $_POST['givenWeight'] <= 250 && $_POST['givenWaistcircuit'] >= 30 && $_POST['givenWaistcircuit'] <= 250 && $_POST['givenSystolic'] >= 50 && $_POST['givenSystolic']<=250 && $_POST['givenDiastolic'] >= 50 && $_POST['givenDiastolic'] <= 250){
