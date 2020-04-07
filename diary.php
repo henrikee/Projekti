@@ -18,6 +18,16 @@ include("includes/header.php");
     <h1>Päiväkirja</h1>
     <h3>Tee merkintä kalenteriin painamalla halutusta päivästä.</h3>
 </header>
+<div>
+        <form method="get">
+            <button type="submit" value="Täytä terveystiedot" name="buttonFillHealthInfo">Täytä terveystietolomake</button>
+        </form>
+</div>
+<?php
+    if(isset($_GET['buttonFillHealthInfo'])){
+        include("includes/diaryHealthInfo.php");
+    }
+?>
 <section>
 <div id="calendar" style="position: absolute; width: 70%; height: 60%;"></div>
 </section>
