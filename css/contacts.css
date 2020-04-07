@@ -51,6 +51,18 @@ h2{
     text-transform: uppercase;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.9);
 }
+label.logo{
+    color: white;
+    font-size: 3.5vh;
+    line-height: 80px;
+    padding: 0px 40px;
+    font-weight: bold; 
+}
+label{
+    padding: 1%;
+    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
+    letter-spacing: 1px;
+}
 p{
     margin-left: 2%;
     margin-top: 1%;

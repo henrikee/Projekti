@@ -1,3 +1,5 @@
+<!-- Lomakkeen otsikot ja niiden tunnukset, jotka yhdistetään kirjautumiskoodeihin -->
+<!-- login/createaccount headers and ids that are connected to the registeration codes -->
 <form method="post">
 <div class="form">
 <br/><label id="labelUsername" for="givenUsername">Käyttäjätunnus</label>
