@@ -20,7 +20,7 @@ include("includes/header.php");
 </header>
 <section>
 <div id="calendar" style="position: absolute; width: 70%; height: 60%;"></div>
-<div>
+<div class="form">
     <form method="get">
         <button class="infoformbtn" type="submit" value="Täytä terveystiedot" name="buttonFillHealthInfo">Täytä terveystietolomake</button>
     </form>

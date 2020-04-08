@@ -36,9 +36,10 @@ span{
     margin-top: 1%;
 }
 #calendar{
+    display: block;
+    float: left;
+    width: 70%;
     margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 20%;
     border: groove rgba(255, 162, 27, 0.5);
     border-radius: 0.5rem;
 }
@@ -79,6 +80,12 @@ span{
     background-color:rgba(255,165,0,0.2);
     width: 100%;
     height: 100%;
+}
+.form{
+    display: block;
+    float: left;
+    width: 70%;
+    margin-left: 15%;
 }
 #link{
     display: none;
