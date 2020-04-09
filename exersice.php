@@ -18,7 +18,7 @@ include("includes/header.php");
        <h1>Liikunta ja harjoittelu</h1>
    </header>
    <section>
-       <p>earth is flat, epstein didnt kill himself, 5G causes coronavirus</p>
+       <p>earth is flat, epstein didnt kill himself, 5G causes coronavirus, jet fuel can't melt steel beams</p>
    </section>
 </body>
 </html>
