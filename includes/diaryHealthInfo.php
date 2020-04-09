@@ -16,16 +16,16 @@ include_once("functions/healthyCalculator.php");
 <?php
     //Tallennetaanko terveystiedot
     if(isset($_POST['submitHealthydata'])){
-        if($_POST['givenAge'] > 64 && $_POST['givenHeight'] > 50 && $_POST['givenHeight'] <= 250 && $_POST['givenWeight'] >= 4.5 && $_POST['givenWeight'] <= 250 && $_POST['givenWaistcircuit'] >= 30 && $_POST['givenWaistcircuit'] <= 250 && $_POST['givenSystolic'] >= 50 && $_POST['givenSystolic']<=250 && $_POST['givenDiastolic'] >= 50 && $_POST['givenDiastolic'] <= 250){
+        if($_POST['givenAge'] > 64 && $_POST['givenHeight'] > 50 && $_POST['givenHeight'] <= 250 && $_POST['givenWeight'] >= 4.5 && $_POST['givenWeight'] <= 250 && $_POST['givenWaistCircuit'] >= 30 && $_POST['givenWaistCircuit'] <= 250 && $_POST['givenSystolic'] >= 50 && $_POST['givenSystolic']<=250 && $_POST['givenDiastolic'] >= 50 && $_POST['givenDiastolic'] <= 250){
             $_SESSION['gender'] = $_POST['givenGender'];
             $_SESSION['age'] = $_POST['givenAge'];
             $_SESSION['height'] = $_POST['givenHeight'];
             $_SESSION['weight'] = $_POST['givenWeight'];
-            $_SESSION['waistcircuit'] = $_POST['givenWaistcircuit'];
+            $_SESSION['waistCircuit'] = $_POST['givenWaistCircuit'];
             //lasketaan bmi, bmin varoitus ja vyötärömitan varoitus, bmi vaikuttaa onko henkilö yli 65v
             $_SESSION['bmi']= getBmi($_SESSION['weight'],$_SESSION['height']);
             $_SESSION['bmiWarning']= getBmiWarning($_SESSION['bmi'],$_SESSION['age']);
-            $_SESSION['waistCircuitWarning'] = getWaistCircuitWarning($_SESSION['waistcircuit'],$_SESSION['gender'],$_SESSION['age']);
+            $_SESSION['waistCircuitWarning'] = getWaistCircuitWarning($_SESSION['waistCircuit'],$_SESSION['gender'],$_SESSION['age']);
             $_SESSION['systolic'] = $_POST['givenSystolic'];
             $_SESSION['diastolic'] = $_POST['givenDiastolic'];
             $_SESSION['bloodPressureWarning'] = getBloodPressureWarning($_SESSION['systolic'],$_SESSION['diastolic']);
@@ -41,7 +41,7 @@ include_once("functions/healthyCalculator.php");
         echo("<Pituus m: " . $_SESSION['height']."<br />");
         echo("Painoindeksi: " . $_SESSION['bmi']."<br />");
         echo(" - " . $_SESSION['bmiWarning'] ."<br />");
-        echo("Vyötärönympärys cm : " . $_SESSION['waistcircuit']."<br />");
+        echo("Vyötärönympärys cm : " . $_SESSION['waistCircuit']."<br />");
         echo(" - ". $_SESSION['waistCircuitWarning'] ."<br/>");
         echo("Yläpaine Hgmm: " . $_SESSION['systolic']."<br />");
         echo("Alapaine Hgmm: " . $_SESSION['diastolic']."</p><hr />");
@@ -66,11 +66,11 @@ if(isset($_POST['submitHealthydata'])){
     //Parametrit taulukkona array
     $data = ['gender'=> $_SESSION['gender'],
         'age'=> $_SESSION['age'],
-        'weight'=>$_SESSION['weight'],
         'height'=>$_SESSION['height'],
+        'weight'=>$_SESSION['weight'],
         'bmi'=>$_SESSION['bmi'],
         'bmiWarning'=>$_SESSION['bmiWarning'],                    
-        'waistcircuit'=>$_SESSION['waistcircuit'],
+        'waistCircuit'=>$_SESSION['waistCircuit'],
         'waistCircuitWarning'=>$_SESSION['waistCircuitWarning'],
         'systolic'=>$_SESSION['systolic'],
         'diastolic'=>$_SESSION['diastolic'],
@@ -78,8 +78,8 @@ if(isset($_POST['submitHealthydata'])){
     
     try{
       //kysely
-       $stmt = $DBH->prepare("INSERT INTO wsk_projekti_terveystiedot (gender, age, weight, height, bmi, bmiWarning, waistcircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning)
-      VALUES (:gender, :age, :weight, :height, :bmi, :bmiWarning, :waistcircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning)");
+       $stmt = $DBH->prepare("INSERT INTO wsk_projekti_terveystiedot (gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning)
+      VALUES (:gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning)");
       $stmt->execute($data);
     
       session_unset();

@@ -8,7 +8,7 @@
         <p>Ikä: <input type="text" name="givenAge"/></p>
         <p>Pituus (cm): <input type="text" name="givenHeight"/></p>
         <p>Paino (kg): <input type="text" name="givenWeight"/></p>
-        <p>Vyötärönympätys (cm): <input type="text" name="givenWaistcircuit"/></p>
+        <p>Vyötärönympätys (cm): <input type="text" name="givenWaistCircuit"/></p>
         <p>Verenpaine: </p>
         <p>Systolinen (yläpaine) (Hgmm): <input type="text" name="givenSystolic"/></p>
         <p>Diastolinen (alapaine) (Hgmm): <input type="text" name="givenDiastolic"/></p>
