@@ -12,7 +12,9 @@ include_once("functions/healthyCalculator.php");
 </head>
 <body>
     <div></div>
-
+    <?php
+        echo $_SESSION['username'];
+    ?>
 <?php
     //Tallennetaanko terveystiedot
     if(isset($_POST['submitHealthydata'])){
@@ -79,7 +81,7 @@ if(isset($_POST['submitHealthydata'])){
     try{
       //kysely
        $stmt = $DBH->prepare("INSERT INTO wsk_projekti_terveystiedot (gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning)
-      VALUES (:gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning)");
+      VALUES (:gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);");
       $stmt->execute($data);
     
       session_unset();

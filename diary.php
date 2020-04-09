@@ -20,18 +20,31 @@ include("includes/header.php");
 </header>
 <section>
 <div id="calendar" style="position: absolute; width: 70%; height: 60%;"></div>
+</section>
 <div class="form">
     <form method="get">
-        <button class="infoformbtn" type="submit" value="Täytä terveystiedot" name="buttonFillHealthInfo">Täytä terveystietolomake</button>
+        <button class="formbtn" type="submit" value="Täytä terveystiedot" name="buttonFillHealthInfo">Täytä terveystietolomake</button>
     </form>
+    <p class="openform">
     <?php
         if(isset($_GET['buttonFillHealthInfo'])){
             include("includes/diaryHealthInfo.php");
         }
     ?>
+    </p>
 </div>
-</section>
-
+<div class="healthdata">
+    <form method="get">
+        <button class="openbtn" type="submit" value="Näytä terveystiedot" name="buttonOpenHealthInfo">Näytä tiedot</button>
+    </form>
+    <p class="opendata">
+    <?php
+        if(isset($_GET['buttonOpenHealthInfo'])){
+            include("includes/diaryOpenHealthInfo.php");
+        }
+    ?>
+    </p>
+</div>
 
 <script src="js/MindFusion.Scheduling.js" type="text/javascript"></script>
 <script src="js/GoogleSchedule.js" type="text/javascript"></script>
