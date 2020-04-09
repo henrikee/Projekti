@@ -53,17 +53,27 @@ section{
     background-color:rgba(255,165,0,0.1);
     position: relative;
     font-size: larger;
-    color: white;
     border: none;
     padding: 1rem 1.5rem;
     cursor: pointer;
 }
+.openbtn{
+    color: black;
+    background-color:rgba(255,165,0,0.1);
+    position: relative;
+    font-size: larger;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+/*button animations*/
 .formbtn:after, .formbtn:before{
     content: '';
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 2px solid orange;
+    border: 3px solid orange;
     transition: all .8s ease;
 }
 .formbtn::after{
@@ -87,6 +97,36 @@ section{
     width: 100%;
     height: 100%;
 }
+.openbtn:after, .openbtn:before{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: 3px solid orange;
+    transition: all .8s ease;
+}
+.openbtn::after{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.openbtn::before{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+.openbtn:hover{
+    background: none;
+    color:rgba(255, 217, 0, 0);
+}
+.openbtn:hover::after, .openbtn:hover::before{
+    background-color:rgba(255,165,0,0.2);
+    width: 100%;
+    height: 100%;
+}
+
 .form{
     display: block;
     float: left;
@@ -96,6 +136,13 @@ section{
 }
 .openform{
     background-color: #fff7f8;
+}
+.healthdata{
+    display: block;
+    float: left;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 15%;
 }
 #link{
     display: none;

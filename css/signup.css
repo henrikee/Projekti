@@ -52,7 +52,7 @@ button{
     padding: 1rem 1.5rem;
     cursor: pointer;
     background-color:rgba(255,165,0,0.2);
-    color: white;
+    color: black;
     font-size: larger;
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
     letter-spacing: 1px;
@@ -65,7 +65,7 @@ button:after, button:before{
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 2px solid orange;
+    border: 3px solid orange;
     transition: all .8s ease;
 }
 button::after{
