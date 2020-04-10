@@ -1,4 +1,4 @@
-<fieldset><legend>Terveystiedot</legend>
+<fieldset class="healthform"><legend class="healthformfs">Terveystiedot</legend>
     <form method="post">
         <p>
             Sukupuoli:  <input type="radio" name="givenGender" value="mies"> Mies</option>

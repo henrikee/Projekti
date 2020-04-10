@@ -1,37 +1,52 @@
 <?php
 include("header.php"); 
+?>
 
-$sql="SELECT wsk_projekti_terveystiedot (gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning, timeOfMeasurement FROM wsk_projekti_terveystiedot";
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Terveystietolomake</title>
+<meta charset="UTF-8"/>
+</head>
+<body>
+    <div></div>
+    <?php
+        echo $_SESSION['username'];
+    ?>
+
+<?php
+$sql="SELECT gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning, timeOfMeasurement FROM wsk_projekti_terveystiedot";
 $kysely=$DBH->prepare($sql);                
 $kysely->execute();
-    echo("<br><table>
+    echo("<br><table class='hdata'>
         <tr>
-            <th>Sukupuoli</th>
-            <th>Ikä</th>
-            <th>Pituus</th>
-            <th>Paino</th>
-            <th>Painoindeksi</th>
-            <th>Paino arvio</th>
-            <th>Vyötärönympärys</th>
-            <th>Vyötärönympärys arvio</th>
-            <th>Verenpaineen yläpaine</th>
-            <th>Verenpaine alapaine</th>
-            <th>Verenpaine arvio</th>
-            <th>Ajankohta</th>
+            <th class='HDth'>Sukupuoli</th>
+            <th class='HDth'>Ikä</th>
+            <th class='HDth'>Pituus</th>
+            <th class='HDth'>Paino</th>
+            <th class='HDth'>Painoindeksi</th>
+            <th class='HDth'>Paino arvio</th>
+            <th class='HDth'>Vyötärönympärys</th>
+            <th class='HDth'>Vyötärönympärys arvio</th>
+            <th class='HDth'>Verenpaineen yläpaine</th>
+            <th class='HDth'>Verenpaine alapaine</th>
+            <th class='HDth'>Verenpaine arvio</th>
+            <th class='HDth'>Ajankohta</th>
         </tr>");
     while ($row=$kysely->fetch()){    
-            echo("<tr><td>".$row["gender"]."</td>
-            <td>".$row["age"]."</td>
-            <td>".$row["height"]."</td>
-            <td>".$row["weight"]."</td>
-            <td>".$row["bmi"]."</td>
-            <td>".$row["bmiWarning"]."</td>
-            <td>".$row["waistCircuit"]."</td>
-            <td>".$row["waistCircuitWarning"]."</td>
-            <td>".$row["systolic"]."</td>
-            <td>".$row["diastolic"]."</td>
-            <td>".$row["bloodPressureWarning"]."</td>
-            <td>".$row["timeOfMeasurement"]."</td>");
+            echo("<tr><td class='HDtd'>".$row["gender"]."</td>
+            <td class='HDtd'>".$row["age"]."</td>
+            <td class='HDtd'>".$row["height"]."</td>
+            <td class='HDtd'>".$row["weight"]."</td>
+            <td class='HDtd'>".$row["bmi"]."</td>
+            <td class='HDtd'>".$row["bmiWarning"]."</td>
+            <td class='HDtd'>".$row["waistCircuit"]."</td>
+            <td class='HDtd'>".$row["waistCircuitWarning"]."</td>
+            <td class='HDtd'>".$row["systolic"]."</td>
+            <td class='HDtd'>".$row["diastolic"]."</td>
+            <td class='HDtd'>".$row["bloodPressureWarning"]."</td>
+            <td class='HDtd'>".$row["timeOfMeasurement"]."</td>");
         }
     echo("</table>");
 

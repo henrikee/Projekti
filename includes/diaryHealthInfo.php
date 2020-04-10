@@ -32,7 +32,7 @@ include_once("functions/healthyCalculator.php");
             $_SESSION['diastolic'] = $_POST['givenDiastolic'];
             $_SESSION['bloodPressureWarning'] = getBloodPressureWarning($_SESSION['systolic'],$_SESSION['diastolic']);
         }else{
-            echo("Anna ikä 55-100, pituus 0.5-2.5m, paino 4.5-200 kg, vyötärön ympärys 30-200 cm, verenpaineet 50-250");
+            echo("Anna ikä 55-100, pituus 50-250cm, paino 4.5-200 kg, vyötärön ympärys 30-200 cm, verenpaineet 50-250");
         }
     }
     //Tulostetaan terveystiedot jos bmi on laskettu

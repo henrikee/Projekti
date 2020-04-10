@@ -46,7 +46,7 @@ span{
 }
 section{
     height: 70%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 .formbtn{
     color: black;
@@ -130,20 +130,52 @@ section{
 .form{
     display: block;
     float: left;
-    width: 70%;
+    width: 40%;
+    margin-left: 20%;
+    margin-bottom: 1%;
+}
+/*heathForm.php*/
+.healthform{
+    display: block;
+    background-color: #fff7f1ab;
+    border: groove rgba(255, 162, 27, 0.5);
+}
+.healthformfs{
+    display: block;
+    background-color: #fff7f1ab;
+}
+
+/*Terveystietojen taulukko*/
+/*.healthdata{
+    display: block;
+    float: left;
     margin-left: 15%;
-    margin-bottom: 15%;
-}
-.openform{
-    background-color: #fff7f8;
-}
-.healthdata{
+    margin-bottom: 10%;
+}*/
+.hdata{
+    border: groove rgba(255, 162, 27, 0.5);
+    background-color: #ffe6d3b7;
     display: block;
     float: left;
     width: 70%;
     margin-left: 15%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
+.HDth{
+    font-size: larger;
+    font-weight: lighter;
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: center;
+}
+.HDtd{
+    text-align: center;
+    background-color: #fff7f170;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+
 #link{
     display: none;
 }
