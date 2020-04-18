@@ -6,17 +6,145 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotu', sans-serif;
     background-image: url("../img/bkg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
 }
-h1{
-    color: white;
+/**NAV:**/
+nav{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #078ca9;
+    height: 80px;   
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+label.logo{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color:#fafafa;
+    font-size: 3.5vh;
+    line-height: 80px;
+    padding: 0px 40px;
+    letter-spacing: 1px;
+    font-weight: bolder; 
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:#fafafa;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #5cd1ecea;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    transition: .5s;
+}
+.checkbtn{
+    margin-top:25px;
+    font-size: 30px;
+    color:#fafafa;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 1236px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1125px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        text-shadow: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    a:hover{
+        color: #fafafa;
+    }
+}
+@media only screen and (max-width: 923px){
+    .checkbtn{
+        display: block;
+    }
+    .boxCreateAccount{
+        height:80vh;
+        width: 50vh;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15;
+        margin-bottom: 15;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0e8ca8;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        z-index: 1;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#fafafa;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    span{
+        font-size: smaller;
+    }
+}
+
+
+header{
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+h1,h2,h3,span{
+    color: #fafafa;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
+}
+h1{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -29,12 +157,53 @@ h1{
     white-space: nowrap;
     width: 18rem;
 }
+span{
+    justify-content: center;
+    font-size: larger;
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+}
 section{
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1320px){
+    section{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+h2{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.9);
+}
+.persons{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .boxPerson{
-    background-color:rgba(255,165,0,0.6);
+    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
+    background-color:rgba(78, 204, 233, 0.6);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
     height: 230px;
     max-height: 300px; 
@@ -44,31 +213,6 @@ section{
     display: inline-block;
     padding: 3px;
     border-radius: 5px;
-}
-h2{
-    margin-left: 2%;
-    margin-top: 1%;
-    font-weight: lighter;
-    color: white;
-    box-shadow: black;
-    letter-spacing: 1px;
-    float: left;
-    clear: both;
-    margin: none;
-    text-transform: uppercase;
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.9);
-}
-label.logo{
-    color: white;
-    font-size: 3.5vh;
-    line-height: 80px;
-    padding: 0px 40px;
-    font-weight: bold; 
-}
-label{
-    padding: 1%;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
 }
 p{
     margin-left: 2%;
@@ -89,115 +233,4 @@ img{
     box-shadow: 2px 2px 3px rgba(3, 3, 3, 0.781);
     border-radius: 4px;
 }
-nav{
-    top: 0;
-    overflow: hidden;
-    position: fixed;
-    background-color:orange;
-    height: 80px;   
-    width: 100%;
-}
-label.logo{
-    color: white;
-    font-size: 3.5vh;
-    line-height: 80px;
-    padding: 0px 40px;
-    font-weight: bold; 
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-a.active,a:hover{
-    background: #FFD700;
-    transition: .5s;
-}
-.checkbtn{
-    margin-top:25px;
-    font-size: 30px;
-    color:white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
-@media only screen and (max-width: 952px){
-    label.logo{
-        font-size: 4vh;
-        padding-left: 20vh;
-    }
-    nav ul li a{
-        font-size: 13px;
-    }
-}
-@media only screen and (max-width: 858px){
-    body{
-        background-size: 190vh;
-        background-repeat: no-repeat;
-    }
-    label.logo{
-        font-size: 16px;
-        padding: 4px;
-    }
-    .checkbtn{
-        display: block;
-    }
-    .boxCreateAccount{
-        height:80vh;
-        width: 50vh;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 15;
-        margin-bottom: 15;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background:#2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color:#FFD700;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    
-    }
-}
-@media only screen and (max-width: 1320px){
-    section{
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
+

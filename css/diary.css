@@ -1,39 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotu', sans-serif;
     background-image: url("../img/yogamama.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-h1,h2,h3,span{
-    color: white;
-    clear: both;
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+/**NAV:**/
+nav{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #c3df12;
+    height: 80px;   
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
+label.logo{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color:#fafafa;
+    font-size: 3.5vh;
+    line-height: 80px;
+    padding: 0px 40px;
+    letter-spacing: 1px;
+    font-weight: bolder; 
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:#fafafa;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #5cd1ecea;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    transition: .5s;
+}
+.checkbtn{
+    margin-top:25px;
+    font-size: 30px;
+    color:#fafafa;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 1236px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1125px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        color: #078ca9;
+        text-shadow: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    a:hover{
+        color: #fafafa;
+    }
+}
+@media only screen and (max-width: 923px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#0e8ca8;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        z-index: 1;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#fafafa;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    span{
+        font-size: smaller;
+    }
+}
+
 header{
     margin-top: 80px;
     width: 100%;
     text-align: center;
 }
-label{
-    padding: 1%;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
-}
-h3{
-    line-height: 1.5rem;
-    letter-spacing: 1px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    overflow: hidden;
-    white-space: nowrap;
+h1,h3,span{
+    color: #fafafa;
+    clear: both;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
 h1{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     margin-top: 7rem;
     text-transform: uppercase;
     font-weight: lighter;
@@ -41,6 +148,30 @@ h1{
     overflow: hidden;
     white-space: nowrap;
     width: 18rem;
+}
+h3{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 40%;
+    border-right: 2px solid #fafafa;
+    animation: animIntro 3.5s steps(151 ,end), animBar 0.3s step-end infinite;
+}
+/*animaatiot h3*/
+@keyframes animIntro{
+    0%{width:0;}
+    100%{width: 40%;}
+}
+@keyframes animBar{
+    0%, 100%{ border-color: rgba(0,0,0,0.0);}
+    50%{border-color: #c3df12}
 }
 span{
     justify-content: center;
@@ -55,25 +186,16 @@ span{
     width: 70%;
     height: 70%;
     margin-left: 15%;
-    border: groove rgba(255, 162, 27, 0.5);
+    border: groove #c3df12;
     border-radius: 0.5rem;
 }
 section{
     height: 70%;
     margin-bottom: 1%;
 }
-.formbtn{
+.formbtn, .openbtn{
     color: black;
-    background-color:rgba(255,165,0,0.1);
-    position: relative;
-    font-size: larger;
-    border: none;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-}
-.openbtn{
-    color: black;
-    background-color:rgba(255,165,0,0.1);
+    background-color:rgba(221,241,86,0.2);
     position: relative;
     font-size: larger;
     border: none;
@@ -87,7 +209,7 @@ section{
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 3px solid orange;
+    border: 3px solid #c3df12;
     transition: all .8s ease;
 }
 .formbtn::after{
@@ -107,36 +229,7 @@ section{
     color:rgba(255, 217, 0, 0);
 }
 .formbtn:hover::after, .formbtn:hover::before{
-    background-color:rgba(255,165,0,0.2);
-    width: 100%;
-    height: 100%;
-}
-.openbtn:after, .openbtn:before{
-    content: '';
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    border: 3px solid orange;
-    transition: all .8s ease;
-}
-.openbtn::after{
-    bottom: 0;
-    right: 0;
-    border-top-color: transparent;
-    border-left-color: transparent;
-}
-.openbtn::before{
-    top: 0;
-    left: 0;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-}
-.openbtn:hover{
-    background: none;
-    color:rgba(255, 217, 0, 0);
-}
-.openbtn:hover::after, .openbtn:hover::before{
-    background-color:rgba(255,165,0,0.2);
+    background-color:rgba(221,241,86,0.3);
     width: 100%;
     height: 100%;
 }
@@ -151,12 +244,12 @@ section{
 /*heathForm.php*/
 .healthform{
     display: block;
-    background-color: #fff7f1ab;
-    border: groove rgba(255, 162, 27, 0.5);
+    background-color: rgba(221,241,86,0.8);
+    border: groove #c3df12;
 }
 .healthformfs{
     display: block;
-    background-color: #fff7f1ab;
+    background-color: rgba(137, 150, 55, 0.8);
 }
 
 /*Terveystietojen taulukko*/
@@ -167,8 +260,8 @@ section{
     margin-bottom: 10%;
 }*/
 .hdata{
-    border: groove rgba(255, 162, 27, 0.5);
-    background-color: #ffe6d3b7;
+    border: groove #c3df12;
+    background-color: rgba(221,241,86,0.8);
     display: block;
     float: left;
     width: 70%;
@@ -184,7 +277,7 @@ section{
 }
 .HDtd{
     text-align: center;
-    background-color: #fff7f170;
+    background-color:rgba(221,241,86,0.8);
     display: table-cell;
     vertical-align: inherit;
 }
@@ -194,107 +287,6 @@ section{
     display: none;
 }
 
-/**NAV:**/
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-nav{
-    background-color:orange;
-    height: 80px;   
-    width: 100%;
-}
-label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0px 40px;
-    font-weight: bold; 
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-a.active,a:hover{
-    background: #FFD700;
-    transition: .5s;
-}
-.checkbtn{
-    margin-top: 25px;
-    font-size: 30px;
-    color:white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
-@media only screen and (max-width: 952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-        padding: 7px;
-    }
-}
-@media only screen and (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background:#2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color:#FFD700;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    span{
-        font-size: smaller;
-    }
-}
 
 /**CALENDAR: **/
 

@@ -1,37 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotu', sans-serif;
     background-image: url("../img/suutujo.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+/**NAV**/
+nav{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #078ca9;
+    height: 80px;   
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+label.logo{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color:#fafafa;
+    font-size: 3.5vh;
+    line-height: 80px;
+    padding: 0px 40px;
+    letter-spacing: 1px;
+    font-weight: bolder; 
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:#fafafa;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #5cd1ecea;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    transition: .5s;
+}
+.checkbtn{
+    margin-top:25px;
+    font-size: 30px;
+    color:#fafafa;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 1236px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1125px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        color: #078ca9;
+        text-shadow: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    a:hover{
+        color: #fafafa;
+    }
+}
+@media only screen and (max-width: 923px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0e8ca8;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        z-index: 1;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#fafafa;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    span{
+        font-size: smaller;
+    }
+}
+
 p{
     color: white;
     box-shadow: black;
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
 }
 .boxCreateAccount{
-        text-align: center;
-        background-color:rgba(255,165,0,0.4);
-        text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
-        letter-spacing: 1px;
-        padding: 3px;
-        border-radius: 4px;
-        color:white;
-        font-weight:bold;
-        height:50vh;
-        width: 100vh;
-        margin-top: 20vh;
-        margin-left: auto;
-        margin-right: auto; 
-        display: block;
-}
-label{
-    padding: 1%;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
+    text-align: center;
+    background-color:rgba(78, 204, 233, 0.6);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
     letter-spacing: 1px;
+    padding: 3px;
+    border-radius: 4px;
+    color:white;
+    font-weight:bold;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto; 
+    display: block;
 }
 .form input{
     width: 20vh;
@@ -89,102 +201,8 @@ button:hover::after, button:hover::before{
     width: 100%;
     height: 100%;
 }
-/*.btn{
-    background-color:rgba(255,165,0,0.6);
-    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.7);
-    color: white;
-    font-size: larger;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
-    display: inline-block;
-    margin: 5%;
-    border: groove rgba(255, 166, 0, 0.7);
-    border-radius: 5px;
-    width: 25%;
-}
-.btn:hover{
-    background-color:rgba(255,165,0,0.9);
-    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.7);
-}
-.btn:active{
-    background-color:rgba(255,165,0,1);
-    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.7);
-}*/
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-nav{  
-    background-color:orange;
-    height: 80px;   
-    width: 100%;
-}
-label.logo{
-    color: white;
-    font-size: 3.5vh;
-    line-height: 80px;
-    padding: 0px 40px;
-    font-weight: bold; 
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-a.active,a:hover{
-    background: #FFD700;
-    transition: .5s;
-}
-.checkbtn{
-    margin-top:25px;
-    font-size: 30px;
-    color:white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
-@media only screen and (max-width: 952px){
-    label.logo{
-        font-size: 4vh;
-        padding-left: 20vh;
-    }
-    nav ul li a{
-        font-size: 13px;
-    }
 
-}
 @media only screen and (max-width: 866px){
-    body{
-        background-size: 190vh;
-        background-repeat: no-repeat;
-    }
-
-    label.logo{
-        font-size: 16px;
-        padding: 4px;
-    }
-    .checkbtn{
-        display: block;
-    }
     .boxCreateAccount{
         height:80vh;
         width: 50vh;
@@ -192,32 +210,6 @@ a.active,a:hover{
         margin-left: auto;
         margin-top: 15;
         margin-bottom: 15;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background:#2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a:hover,a.active{
-        background: none;
-        color:#FFD700;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    
     }
     .boxCreateAccount{
         width: 80%;
