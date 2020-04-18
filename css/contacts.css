@@ -17,10 +17,17 @@ h1{
     color: white;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
-    letter-spacing: 1px;
-    margin: 2%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 7rem;
     text-transform: uppercase;
     font-weight: lighter;
+    letter-spacing: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 18rem;
 }
 section{
     display: flex;
@@ -82,7 +89,10 @@ img{
     box-shadow: 2px 2px 3px rgba(3, 3, 3, 0.781);
     border-radius: 4px;
 }
-nav{  
+nav{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
     background-color:orange;
     height: 80px;   
     width: 100%;
