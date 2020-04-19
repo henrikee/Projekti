@@ -10,6 +10,7 @@ include("includes/header.php");
     <title>Päiväkirja</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/diary.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Gotu&display=swap" rel="stylesheet">
     <link href="themes/light.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,9 +19,6 @@ include("includes/header.php");
     <h1>Päiväkirja</h1>
     <h3>Tee merkintä kalenteriin painamalla halutusta päivästä.</h3>
 </header>
-<section>
-<div id="calendar" style="position: absolute; width: 70%; height: 60%;"></div>
-</section>
 <div class="form">
     <form method="get">
         <button class="formbtn" type="submit" value="Täytä terveystiedot" name="buttonFillHealthInfo">Täytä terveystietolomake</button>
@@ -53,16 +51,6 @@ include("includes/header.php");
     var date = new Date();
     document.getElementById("date").innerHTML = "Tänään on "+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
     
-
-//avaa kalenteri
-  //  function openCalendar(){
-  //      var x = document.getElementById("calendar");
-  //      if (x.style.display === "none") {
-  //      x.style.display = "block";
-  //      }else{
-  //      x.style.display = "none";
-  //      }
-  //  }
 
 //???olisiko tämä funktio mitä käytetään päiväkirjamerkintöjen etsimiseen????
 //getDiaryEntry.php tekemättä -> vaatii databasen

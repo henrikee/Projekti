@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotu', sans-serif;
     background-image: url("../img/suutujo.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -14,22 +14,25 @@ body{
     background-attachment: fixed;
  
 }
-label{
-    padding: 1%;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
-}
+
+/**NAV:**/
 nav{
-    background-color:orange;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #12646f;
     height: 80px;   
     width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 label.logo{
-    color: white;
-    font-size: 35px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color:#ececec;
+    font-size: 3.5vh;
     line-height: 80px;
     padding: 0px 40px;
-    font-weight: bold; 
+    letter-spacing: 1px;
+    font-weight: bolder; 
 }
 nav ul{
     float: right;
@@ -41,20 +44,20 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color: white;
-    font-size: 17px;
+    color:#ececec;
+    font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #FFD700;
+    text-shadow: 2px 2px 3px #fbfbfb;
     transition: .5s;
 }
 .checkbtn{
-    margin-top: 25px;
+    margin-top:25px;
     font-size: 30px;
-    color:white;
+    color:#ececec;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -64,77 +67,31 @@ a.active,a:hover{
 #check{
     display: none;
 }
-
-/*body*/
-.card{
-    width: 60%;
-    padding: 1.5rem;
-    background-color:rgba(248, 248, 248, 0.6);
-    border-radius: 5px;
-    margin: 1.5rem 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
-}
-h3{
-    margin-bottom: 1rem;
-    font-size: larger;
-    font-weight: lighter;
-    color: orange;
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
-}
-p{
-    font-weight: 300;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
-}
-.button{
-    background-color:rgba(255,165,0,0.1);
-    position: relative;
-    font-size: larger;
-    color: black;
-    border: none;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-}
-.button:after, .button:before{
-    content: '';
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    border: 3px solid orange;
-    transition: all .8s ease;
-}
-.button::after{
-    bottom: 0;
-    right: 0;
-    border-top-color: transparent;
-    border-left-color: transparent;
-}
-.button::before{
-    top: 0;
-    left: 0;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-}
-.button:hover{
-    background: none;
-    color:rgba(255, 217, 0, 0);
-}
-.button:hover::after, .button:hover::before{
-    background-color:rgba(255,165,0,0.2);
-    width: 100%;
-    height: 100%;
-}
-@media only screen and (max-width: 952px){
+@media only screen and (max-width: 1236px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
     }
     nav ul li a{
-        font-size: 16px;
-        padding: 7px;
+        font-size: 17px;
+        padding: 5px;
     }
 }
-@media only screen and (max-width: 858px){
+@media only screen and (max-width: 1125px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        text-shadow: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    a:hover{
+        color: #fbfbfb;
+    }
+}
+@media only screen and (max-width: 923px){
     .checkbtn{
         display: block;
     }
@@ -142,7 +99,7 @@ p{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background:#2c3e50;
+        background:#53b0bd;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -159,11 +116,112 @@ p{
     }
     a:hover,a.active{
         background: none;
-        color:#FFD700;
+        color:#fbfbfb;
     }
     #check:checked ~ ul{
         left: 0;
-    
     }
-    
+    span{
+        font-size: smaller;
+    }
 }
+
+/*body*/
+header{
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+h1,span{
+    color: #fbfbfb;
+    clear: both;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
+}
+h1{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 7rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+span{
+    justify-content: center;
+    font-size: larger;
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 1rem;
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    margin-bottom: 2%;
+}
+h3{
+    color: black;
+    margin-bottom: 1rem;
+    font-size: larger;
+    font-weight: lighter;
+    text-shadow: 2px 2px 3px #fbfbfbf3;
+}
+p{
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.button{
+    color: black;
+    background-color:#53b1bdab;
+    position: relative;
+    font-size: larger;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/*button animations*/
+.button:after, .button:before{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    border: 3px solid #12646f;
+    transition: all .8s ease;
+}
+.button::after{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.button::before{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+.button:hover{
+    background: none;
+}
+.button:hover::after, .button:hover::before{
+    background-color:#53b1bd91;
+    width: 100%;
+    height: 100%;
+}
+
+
