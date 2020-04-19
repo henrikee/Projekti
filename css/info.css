@@ -88,6 +88,13 @@ a.active,a:hover{
     a:hover{
         color: #ececec;
     }
+    section{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
 }
 @media only screen and (max-width: 923px){
     .checkbtn{
@@ -101,7 +108,7 @@ a.active,a:hover{
         top: 80px;
         left: -100%;
         text-align: center;
-        transition: all .5s;
+        transition: all .5s ease;
     }
     nav ul li{
         display: block;
@@ -118,9 +125,12 @@ a.active,a:hover{
     }
     #check:checked ~ ul{
         left: 0;
-    
     }
     span{
+        font-size: smaller;
+    }
+    /*body mediasäännöt*/
+    header{
         font-size: smaller;
     }
 }
@@ -155,19 +165,7 @@ h3{
     letter-spacing: 1px;
     margin-top: 1%;
     margin-bottom: 1%;
-    white-space: nowrap;
     width: 40%;
-    border-right: 2px solid #fbfbfb;
-    animation: animIntro 3.5s steps(151 ,end), animBar 0.3s step-end infinite;
-}
-/*animaatiot h3*/
-@keyframes animIntro{
-    0%{width:0;}
-    100%{width: 40%;}
-}
-@keyframes animBar{
-    0%, 100%{ border-color: rgba(0,0,0,0.0);}
-    50%{border-color: #fbfbfb}
 }
 span{
     justify-content: center;
@@ -176,12 +174,17 @@ span{
     margin-right: 1%;
     margin-top: 1%;
 }
+section{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 #buttons{
+    position: relative;
     overflow: visible;
-    margin-top: 265px;
     margin-left: 5%;
     width: 20%;
-    display: block;
+    display: flex;
     float: left;
     background-color:rgba(0,0,0,0.0);
 }
@@ -190,6 +193,7 @@ button{
     padding: 5%;
     text-align: left;
     font-size: larger;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
@@ -210,7 +214,7 @@ div{
     margin-left: 25%;
     margin-right: 5%;
     justify-items: center;
-    min-width: 7rem;
+    min-width: 6rem;
     max-width: 50%;
 }
 p{
@@ -225,6 +229,43 @@ p{
     padding: 12px 16px;
     margin-bottom: 2%;
     word-spacing: 5px;
+}
+@media only screen and (max-width: 1248px){
+    div{
+        margin-left: 30%;
+        transition: all .5s ease;
+    }
+    #buttons{
+        overflow: none;
+        display: block;
+        margin-left: 8%;
+        transition: all .5s ease;
+    }
+}
+@media only screen and (max-width: 923px){
+    section{
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+    }
+    div{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 70%;
+        transition: all .5s ease;
+    }
+    #buttons{
+        float: none;
+        overflow: none;
+        display: block;
+        justify-content: center;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all .5s ease;
+    }
 }
 img{
     display: block;
