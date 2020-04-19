@@ -138,7 +138,7 @@ header{
     width: 100%;
     text-align: center;
 }
-h1,h2,h3,span{
+h1,h2,span{
     color: #fbfbfb;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
@@ -184,7 +184,7 @@ h2{
     display: block;
     line-height: 1.5rem;
     letter-spacing: 1px;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 1%;
     overflow: hidden;
     white-space: nowrap;
@@ -198,7 +198,6 @@ h2{
     display: block;
 }
 .boxPerson{
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
     background-color:#fbfbfbd3;
     border: 1px solid #53b1bd;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
@@ -211,13 +210,17 @@ h2{
     padding: 3px;
     border-radius: 5px;
 }
+h3{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 p{
     margin-left: 2%;
     margin-top: 1%;
     margin-right: 2%;
-    color: #fbfbfb;
+    color: black;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
     float: left;
 }
 img{

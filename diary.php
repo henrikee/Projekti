@@ -44,9 +44,6 @@ include("includes/header.php");
     </p>
 </div>
 
-<script src="js/MindFusion.Scheduling.js" type="text/javascript"></script>
-<script src="js/GoogleSchedule.js" type="text/javascript"></script>
-<script src="js/TimeForm.js" type="text/javascript"></script>
 <script>
     var date = new Date();
     document.getElementById("date").innerHTML = "Tänään on "+date.getDate()+'.'+(date.getMonth()+1)+'.'+date.getFullYear();
@@ -70,7 +67,5 @@ include("includes/header.php");
     xhttp.send();
     }
 </script>
-<a id="link" href="http://MindFusion.Scheduling.js">http://MindFusion.Scheduling.js</a>
-<a id= "link" href="http://GoogleSchedule.js">http://GoogleSchedule.js</a>
 </body>
 </html>
