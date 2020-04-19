@@ -193,7 +193,7 @@ button{
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
-    background-color: none;
+    background-color: #fbfbfb00;
 }
 button:hover{
     color: #fafafa;
