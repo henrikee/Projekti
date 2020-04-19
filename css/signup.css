@@ -18,14 +18,14 @@ nav{
     top: 0;
     overflow: hidden;
     position: fixed;
-    background-color: #078ca9;
+    background-color: #12646f;
     height: 80px;   
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 label.logo{
     font-family: 'Alegreya Sans SC', sans-serif;
-    color:#fafafa;
+    color:#ececec;
     font-size: 3.5vh;
     line-height: 80px;
     padding: 0px 40px;
@@ -42,21 +42,20 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color:#fafafa;
+    color:#ececec;
     font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #5cd1ecea;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 3px #fbfbfb;
     transition: .5s;
 }
 .checkbtn{
     margin-top:25px;
     font-size: 30px;
-    color:#fafafa;
+    color:#ececec;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -82,13 +81,12 @@ a.active,a:hover{
         padding-left: 50px;
     }
     nav ul li a{
-        color: #078ca9;
         text-shadow: none;
         font-size: 14px;
         padding: 5px;
     }
     a:hover{
-        color: #fafafa;
+        color: #fbfbfb;
     }
 }
 @media only screen and (max-width: 923px){
@@ -99,7 +97,7 @@ a.active,a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #0e8ca8;
+        background: #53b0bd;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -116,7 +114,7 @@ a.active,a:hover{
     }
     a:hover,a.active{
         background: none;
-        color:#fafafa;
+        color:#fbfbfb;
     }
     #check:checked ~ ul{
         left: 0;
@@ -127,8 +125,7 @@ a.active,a:hover{
 }
 
 p{
-    color: white;
-    box-shadow: black;
+    color: #fbfbfb;
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
 }
 .boxCreateAccount{
@@ -138,7 +135,7 @@ p{
     letter-spacing: 1px;
     padding: 3px;
     border-radius: 4px;
-    color:white;
+    color:#fbfbfb;
     font-weight:bold;
     margin-top: 20vh;
     margin-left: auto;
@@ -151,7 +148,8 @@ p{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
     border-radius: 5px;
     border: none;
 }
@@ -159,45 +157,41 @@ p{
     border: 1px solid red;
 }
 button{
-    position: relative;
-    border: none;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    background-color:rgba(255,165,0,0.2);
     color: black;
+    background-color:#53b1bdab;
+    position: relative;
     font-size: larger;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
-    display: inline-block;
-    margin: 5%;
-    width: 25%;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
-button:after, button:before{
+/*button animations*/
+.button:after, .button:before{
     content: '';
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 3px solid orange;
+    border: 3px solid #12646f;
     transition: all .8s ease;
 }
-button::after{
+.button::after{
     bottom: 0;
     right: 0;
     border-top-color: transparent;
     border-left-color: transparent;
 }
-button::before{
+.button::before{
     top: 0;
     left: 0;
     border-bottom-color: transparent;
     border-right-color: transparent;
 }
-button:hover{
+.button:hover{
     background: none;
     color:rgba(255, 217, 0, 0);
 }
-button:hover::after, button:hover::before{
-    background-color:rgba(255,165,0,0.6);
+.button:hover::after, .button:hover::before{
+    background-color:#53b1bdab;
     width: 100%;
     height: 100%;
 }
@@ -206,6 +200,7 @@ button:hover::after, button:hover::before{
     .boxCreateAccount{
         height:80vh;
         width: 50vh;
+        display: block;
         margin-right: auto;
         margin-left: auto;
         margin-top: 15;

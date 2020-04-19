@@ -18,14 +18,14 @@ nav{
     top: 0;
     overflow: hidden;
     position: fixed;
-    background-color: #078ca9;
+    background-color: #12646f;
     height: 80px;   
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 label.logo{
     font-family: 'Alegreya Sans SC', sans-serif;
-    color:#fafafa;
+    color:#ececec;
     font-size: 3.5vh;
     line-height: 80px;
     padding: 0px 40px;
@@ -42,21 +42,20 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color:#fafafa;
+    color:#ececec;
     font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #5cd1ecea;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 3px #fbfbfb;
     transition: .5s;
 }
 .checkbtn{
     margin-top:25px;
     font-size: 30px;
-    color:#fafafa;
+    color:#ececec;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -82,13 +81,12 @@ a.active,a:hover{
         padding-left: 50px;
     }
     nav ul li a{
-        color: #078ca9;
         text-shadow: none;
         font-size: 14px;
         padding: 5px;
     }
     a:hover{
-        color: #fafafa;
+        color: #ececec;
     }
 }
 @media only screen and (max-width: 923px){
@@ -99,7 +97,7 @@ a.active,a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #0e8ca8;
+        background: #53b0bd;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -116,7 +114,7 @@ a.active,a:hover{
     }
     a:hover,a.active{
         background: none;
-        color:#fafafa;
+        color:#fbfbfb;
     }
     #check:checked ~ ul{
         left: 0;
@@ -126,13 +124,15 @@ a.active,a:hover{
         font-size: smaller;
     }
 }
+
+/*body*/
 header{
     margin-top: 80px;
     width: 100%;
     text-align: center;
 }
 h1,h3,span{
-    color: #fafafa;
+    color: #fbfbfb;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
@@ -155,10 +155,9 @@ h3{
     letter-spacing: 1px;
     margin-top: 1%;
     margin-bottom: 1%;
-    overflow: hidden;
     white-space: nowrap;
     width: 40%;
-    border-right: 2px solid #c3df12;
+    border-right: 2px solid #fbfbfb;
     animation: animIntro 3.5s steps(151 ,end), animBar 0.3s step-end infinite;
 }
 /*animaatiot h3*/
@@ -168,7 +167,7 @@ h3{
 }
 @keyframes animBar{
     0%, 100%{ border-color: rgba(0,0,0,0.0);}
-    50%{border-color: #c3df12}
+    50%{border-color: #fbfbfb}
 }
 span{
     justify-content: center;
@@ -187,21 +186,23 @@ span{
     background-color:rgba(0,0,0,0.0);
 }
 button{
-    text-shadow: 2px 2px 3px rgba(253, 253, 253, 0.8);
+    text-shadow: 2px 2px 3px #fbfbfb;
     padding: 5%;
     text-align: left;
     font-size: larger;
-    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     border: none;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: none;
 }
 button:hover{
     color: #fafafa;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+    transition: .5s;
 }
 button:active{
     color: black;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.9);
+    text-shadow: 2px 2px 3px #fbfbfb;
 }
 div{
     float: left;
@@ -218,7 +219,8 @@ p{
     display: none;
     position: relative;
     text-align: left;
-    background-color:rgba(221,241,86,0.6);
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
     padding: 12px 16px;
     margin-bottom: 2%;

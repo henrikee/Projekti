@@ -18,14 +18,14 @@ nav{
     top: 0;
     overflow: hidden;
     position: fixed;
-    background-color: #078ca9;
+    background-color: #12646f;
     height: 80px;   
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 label.logo{
     font-family: 'Alegreya Sans SC', sans-serif;
-    color:#fafafa;
+    color:#ececec;
     font-size: 3.5vh;
     line-height: 80px;
     padding: 0px 40px;
@@ -42,21 +42,20 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color:#fafafa;
+    color:#ececec;
     font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #5cd1ecea;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 3px #fbfbfb;
     transition: .5s;
 }
 .checkbtn{
     margin-top:25px;
     font-size: 30px;
-    color:#fafafa;
+    color:#ececec;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -82,13 +81,12 @@ a.active,a:hover{
         padding-left: 50px;
     }
     nav ul li a{
-        color: #078ca9;
         text-shadow: none;
         font-size: 14px;
         padding: 5px;
     }
     a:hover{
-        color: #fafafa;
+        color: #fbfbfb;
     }
 }
 @media only screen and (max-width: 923px){
@@ -99,7 +97,7 @@ a.active,a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #0e8ca8;
+        background: #53b0bd;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -116,20 +114,21 @@ a.active,a:hover{
     }
     a:hover,a.active{
         background: none;
-        color:#fafafa;
+        color:#fbfbfb;
     }
     #check:checked ~ ul{
         left: 0;
     }
 }
 
+/*body*/
 header{
     margin-top: 80px;
     width: 100%;
     text-align: center;
 }
 h1{
-    color: #fafafa;
+    color: #fbfbfb;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
     text-align: center;
@@ -151,10 +150,9 @@ h2{
 }
 .boxLogin {
     text-align: center;
-    background-color:rgba(78, 204, 233, 0.6);
+    background-color:#fbfbfbd3;
     padding: 1vh;
     border-radius: 5px;
-    color:#fafafa;
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
     letter-spacing: 1px;
     width: 50%;
@@ -170,7 +168,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color:rgba(255, 255, 255, 0.8);
+    background-color:#53b1bdab;
     border-radius: 5px;
     border: none;
 }
@@ -185,40 +183,40 @@ h2{
 }
 button{
     color: black;
-    background-color:rgba(221,241,86,0.2);
+    background-color:#53b1bdab;
     position: relative;
     font-size: larger;
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }
 /*button animations*/
-button:after, button:before{
+.button:after, .button:before{
     content: '';
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 3px solid #c3df12;
+    border: 3px solid #12646f;
     transition: all .8s ease;
 }
-button::after{
+.button::after{
     bottom: 0;
     right: 0;
     border-top-color: transparent;
     border-left-color: transparent;
 }
-button::before{
+.button::before{
     top: 0;
     left: 0;
     border-bottom-color: transparent;
     border-right-color: transparent;
 }
-button:hover{
+.button:hover{
     background: none;
     color:rgba(255, 217, 0, 0);
 }
-button:hover::after, button:hover::before{
-    background-color:rgba(221,241,86,0.3);
+.button:hover::after, .button:hover::before{
+    background-color:#53b1bdab;
     width: 100%;
     height: 100%;
 }
@@ -229,7 +227,7 @@ input{
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color:rgb(221, 243, 243);
+    background-color:#53b1bdab;
 }
 @media only screen and (max-width: 625px){
     .button{

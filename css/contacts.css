@@ -18,14 +18,14 @@ nav{
     top: 0;
     overflow: hidden;
     position: fixed;
-    background-color: #078ca9;
+    background-color: #12646f;
     height: 80px;   
     width: 100%;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 label.logo{
     font-family: 'Alegreya Sans SC', sans-serif;
-    color:#fafafa;
+    color:#ececec;
     font-size: 3.5vh;
     line-height: 80px;
     padding: 0px 40px;
@@ -42,21 +42,20 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a{
-    color:#fafafa;
+    color:#ececec;
     font-size: 20px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #5cd1ecea;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 3px #fbfbfb;
     transition: .5s;
 }
 .checkbtn{
     margin-top:25px;
     font-size: 30px;
-    color:#fafafa;
+    color:#ececec;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -87,7 +86,7 @@ a.active,a:hover{
         padding: 5px;
     }
     a:hover{
-        color: #fafafa;
+        color: #fbfbfb;
     }
 }
 @media only screen and (max-width: 923px){
@@ -106,7 +105,7 @@ a.active,a:hover{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #0e8ca8;
+        background: #53b0bd;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -123,7 +122,7 @@ a.active,a:hover{
     }
     a:hover,a.active{
         background: none;
-        color:#fafafa;
+        color:#fbfbfb;
     }
     #check:checked ~ ul{
         left: 0;
@@ -140,7 +139,7 @@ header{
     text-align: center;
 }
 h1,h2,h3,span{
-    color: #fafafa;
+    color: #fbfbfb;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
@@ -153,9 +152,6 @@ h1{
     text-transform: uppercase;
     font-weight: lighter;
     letter-spacing: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 18rem;
 }
 span{
     justify-content: center;
@@ -203,7 +199,8 @@ h2{
 }
 .boxPerson{
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    background-color:rgba(78, 204, 233, 0.6);
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
     height: 230px;
     max-height: 300px; 
@@ -218,8 +215,7 @@ p{
     margin-left: 2%;
     margin-top: 1%;
     margin-right: 2%;
-    color: white;
-    box-shadow: black;
+    color: #fbfbfb;
     letter-spacing: 1px;
     text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
     float: left;
@@ -230,7 +226,7 @@ img{
     margin-right: 2%;
     height: 160px;
     width: 130px;
-    box-shadow: 2px 2px 3px rgba(3, 3, 3, 0.781);
+    box-shadow: 2px 2px 3px rgba(3, 3, 3, 0.7);
     border-radius: 4px;
 }
 
