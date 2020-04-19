@@ -1,4 +1,5 @@
 <?php
+/*
 //Painoindeksi =paino jaettuna pituuden neliöllä
 function getBmi($weight, $height){
     return $weight/($height*$height);
@@ -29,4 +30,5 @@ function getBloodPressureWarning($systolic, $diastolic){
          return "paineet koholla"; 
      }
 }
+*/
 ?>

@@ -52,12 +52,12 @@ include("includes/header.php");
       try {
         //***Email ei saa olla käytetty aiemmin
         //***Email must be new
-        $sql = "SELECT COUNT(*) FROM wsk_projekti where userEmail  =  " . "'" . $_POST['givenEmail'] . "'";
+        $sql = "SELECT COUNT(*) FROM testi_projekti where userEmail  =  " . "'" . $_POST['givenEmail'] . "'";
         $kysely = $DBH->prepare($sql);
         $kysely->execute();
         $tulos = $kysely->fetch();
         if ($tulos[0] == 0) { //email ei ole käytössä/email isnt used
-          $STH = $DBH->prepare("INSERT INTO wsk_projekti (userName, userEmail, userPwd) VALUES (:name, :email, :pwd);");
+          $STH = $DBH->prepare("INSERT INTO testi_projekti (userName, userEmail, userPwd) VALUES (:name, :email, :pwd);");
           $STH->execute($data);
           header("Location: Main.php"); //Palataan pääsivulle kirjautuneena/return to the mainpage
         } else {

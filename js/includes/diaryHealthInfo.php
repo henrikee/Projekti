@@ -66,7 +66,6 @@ include_once("functions/healthyCalculator.php");
     }
 ?>
 <?php
-/*
  //kirjautuneen käyttäjän userID?
     $data1['email'] = $_SESSION['suserEmail'];
     $sql1 = "SELECT userID FROM testi_projekti where userEmail =  :email";
@@ -76,7 +75,6 @@ include_once("functions/healthyCalculator.php");
     $currentUserID=$tulos1[0];
     echo"rivi 76 $currentUserID";
     $_SESSION['userID']=$currentUserID;
-    */
     ?>
 
     
@@ -92,14 +90,15 @@ if(isset($_POST['submitHealthydata'])){
         $data2['weight']=$_POST['givenWeight'];
         $data2['bmi']=getBmi($_POST['givenWeight'],$_POST['givenHeight']);
         $data2['bmiWarning']=getBmiWarning($data2['bmi'],$_POST['givenAge']);
-        $data2['waistCircuit']=$_POST['givenWaistCircuit'];
+        $data2['waistCircuit']=$_POST['givenwaistCircuit'];
         $data2['waistCircuitWarning']=getWaistCircuitWarning($_POST['givenWaistCircuit'],$_POST['givenGender'],$_POST['givenAge']);
         $data2['systolic']=$_POST['givenSystolic'];
         $data2['diastolic']=$_POST['givenDiastolic'];
         $data2['bloodPressureWarning']=getBloodPressureWarning($_POST['givenSystolic'],$_POST['givenDiastolic']);
-        echo" rivi 98";
+        echo" rivi 94";
         var_dump($data2);
-    $sql2="INSERT INTO testi_projekti_terveystiedot (userID, gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning) VALUES (:userID, :gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);";
+    $sql2="INSERT INTO testi_projekti_terveystiedot ('userID','gender', 'age', 'height', 'weight', 'bmi', 'bmiWarning', 'waistCircuit', 'waistCircuitWarning', 'systolic', 'diastolic', 'bloodPressureWarning')
+    VALUES (:UserId: gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);";
      $kysely2 = $DBH->prepare($sql2); 
      $kysely2->execute($data2);
    } catch(PDOException $e) {
