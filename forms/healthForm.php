@@ -14,4 +14,5 @@
         <p>Diastolinen (alapaine) (Hgmm): <input type="text" name="givenDiastolic"/></p>
         <p><button type="submit" name="submitHealthydata">Hyväksy terveystiedot</button>
             <button type="reset" name="resetHealthydata">Hylkää terveystiedot</button></p>
+        </form>
 </fieldset>
