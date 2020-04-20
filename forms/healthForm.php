@@ -15,11 +15,6 @@
         <p>Systolinen (yläpaine) (Hgmm): <input type="text" name="givenSystolic"/></p>
         <p>Diastolinen (alapaine) (Hgmm): <input type="text" name="givenDiastolic"/></p>
         <p><button type="submit" name="submitHealthydata">Hyväksy terveystiedot</button>
-<<<<<<< HEAD
-            <button type="reset" name="resetHealthydata">Hylkää terveystiedot</button>
-</form>
-=======
             <button type="reset" name="resetHealthydata">Hylkää terveystiedot</button></p>
         </form>
 </fieldset>
->>>>>>> 6db58b2d59274e4fb87aefa8b63dce00d699c528
