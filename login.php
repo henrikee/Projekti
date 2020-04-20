@@ -9,8 +9,8 @@ include("includes/header.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/login.css">
   <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Gotu&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <title>Document</title>
 </head>
@@ -34,7 +34,7 @@ include("includes/header.php");
         //Information from the server
         
         $data['email'] = $_POST['givenEmail'];
-        $STH = $DBH->prepare("SELECT userName, userEmail, userPwd FROM wsk_projekti WHERE userEmail = :email;");
+        $STH = $DBH->prepare("SELECT userName, userEmail, userPwd FROM testi_projekti WHERE userEmail = :email;");
         $STH->execute($data);
         $STH->setFetchMode(PDO::FETCH_OBJ);
         $tulosOlio = $STH->fetch();
@@ -51,6 +51,16 @@ include("includes/header.php");
             $_SESSION['sloggedIn'] = "yes";
             $_SESSION['suserName'] = $tulosOlio->userName;
             $_SESSION['suserEmail'] = $tulosOlio->userEmail;
+            
+           //kirjautuneen käyttäjän userID?
+              $data1['email'] = $_SESSION['suserEmail'];
+              $sql1 = "SELECT userID FROM testi_projekti where userEmail =  :email";
+              $kysely1=$DBH->prepare($sql1);
+              $kysely1->execute($data1);
+              $tulos1=$kysely1->fetch();
+              $currentUserID=$tulos1[0];
+              $_SESSION['userID']=$currentUserID;
+    
             //Palataan pääsivulle kirjautuneena
             //Return to the main site
             header("Location: Main.php"); 

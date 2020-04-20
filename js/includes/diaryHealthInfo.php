@@ -1,6 +1,6 @@
 <?php
 include("header.php");  //yhteysolio
-include("forms/formHealth.php");
+include("forms/healthForm.php");
 include_once("functions/healthyCalculator.php");
 ?>
 <!doctype html>
@@ -35,7 +35,7 @@ include_once("functions/healthyCalculator.php");
             $_SESSION['diastolic'] = $_POST['givenDiastolic'];
             $_SESSION['bloodPressureWarning'] = getBloodPressureWarning($_SESSION['systolic'],$_SESSION['diastolic']);
         }else{
-            echo "<script>alert('Anna ikä 55-100, pituus 50-250cm,< paino 4.5-200 kg, vyötärön ympärys 30-200 cm, verenpaineet 50-250');</script>";
+            echo("Anna ikä 55-100, pituus 50-250cm, paino 4.5-200 kg, vyötärön ympärys 30-200 cm, verenpaineet 50-250");
         }
     }
     //Tulostetaan terveystiedot jos bmi on laskettu
@@ -53,28 +53,6 @@ include_once("functions/healthyCalculator.php");
      }
 ?>
 <?php
-<<<<<<< HEAD
-// Halutanko talletetaa tiedot kantaan?
-if(isset($_POST['submitHealthydata'])){
-    //Parametrit taulukkona array
-    $data = ['gender'=> $_SESSION['gender'],
-        'age'=> $_SESSION['age'],
-        'height'=>$_SESSION['height'],
-        'weight'=>$_SESSION['weight'],
-        'bmi'=>$_SESSION['bmi'],
-        'bmiWarning'=>$_SESSION['bmiWarning'],                    
-        'waistCircuit'=>$_SESSION['waistCircuit'],
-        'waistCircuitWarning'=>$_SESSION['waistCircuitWarning'],
-        'systolic'=>$_SESSION['systolic'],
-        'diastolic'=>$_SESSION['diastolic'],
-        'bloodPressureWarning'=>$_SESSION['bloodPressureWarning']];
-    
-    try{
-      //kysely
-       $stmt = $DBH->prepare("INSERT INTO wsk_projekti_terveystiedot (gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning)
-      VALUES (:gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);");
-      $stmt->execute($data);
-=======
     include("forms/saveHealthFormData.php");
     if(isset($_POST['buttonSave']) && strlen($_SESSION['name']) >=2){
         echo("Tiedot tallennettu onnistuneesti.");
@@ -88,7 +66,6 @@ if(isset($_POST['submitHealthydata'])){
     }
 ?>
 <?php
-/*
  //kirjautuneen käyttäjän userID?
     $data1['email'] = $_SESSION['suserEmail'];
     $sql1 = "SELECT userID FROM testi_projekti where userEmail =  :email";
@@ -98,10 +75,8 @@ if(isset($_POST['submitHealthydata'])){
     $currentUserID=$tulos1[0];
     echo"rivi 76 $currentUserID";
     $_SESSION['userID']=$currentUserID;
-    */
     ?>
 
->>>>>>> 6db58b2d59274e4fb87aefa8b63dce00d699c528
     
 <?php
 if(isset($_POST['submitHealthydata'])){
@@ -115,14 +90,15 @@ if(isset($_POST['submitHealthydata'])){
         $data2['weight']=$_POST['givenWeight'];
         $data2['bmi']=getBmi($_POST['givenWeight'],$_POST['givenHeight']);
         $data2['bmiWarning']=getBmiWarning($data2['bmi'],$_POST['givenAge']);
-        $data2['waistCircuit']=$_POST['givenWaistCircuit'];
+        $data2['waistCircuit']=$_POST['givenwaistCircuit'];
         $data2['waistCircuitWarning']=getWaistCircuitWarning($_POST['givenWaistCircuit'],$_POST['givenGender'],$_POST['givenAge']);
         $data2['systolic']=$_POST['givenSystolic'];
         $data2['diastolic']=$_POST['givenDiastolic'];
         $data2['bloodPressureWarning']=getBloodPressureWarning($_POST['givenSystolic'],$_POST['givenDiastolic']);
-        echo" rivi 98";
+        echo" rivi 94";
         var_dump($data2);
-    $sql2="INSERT INTO testi_projekti_terveystiedot (userID, gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning) VALUES (:userID, :gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);";
+    $sql2="INSERT INTO testi_projekti_terveystiedot ('userID','gender', 'age', 'height', 'weight', 'bmi', 'bmiWarning', 'waistCircuit', 'waistCircuitWarning', 'systolic', 'diastolic', 'bloodPressureWarning')
+    VALUES (:UserId: gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);";
      $kysely2 = $DBH->prepare($sql2); 
      $kysely2->execute($data2);
    } catch(PDOException $e) {
@@ -130,11 +106,8 @@ if(isset($_POST['submitHealthydata'])){
    }
   }
 ?>
-<<<<<<< HEAD
-=======
 
 
 <hr/>
->>>>>>> 6db58b2d59274e4fb87aefa8b63dce00d699c528
 </body>
 </html>

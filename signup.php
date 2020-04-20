@@ -9,6 +9,7 @@ include("includes/header.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Gotu&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <title>Document</title>
 </head>
@@ -52,12 +53,12 @@ include("includes/header.php");
       try {
         //***Email ei saa olla käytetty aiemmin
         //***Email must be new
-        $sql = "SELECT COUNT(*) FROM wsk_projekti where userEmail  =  " . "'" . $_POST['givenEmail'] . "'";
+        $sql = "SELECT COUNT(*) FROM testi_projekti where userEmail  =  " . "'" . $_POST['givenEmail'] . "'";
         $kysely = $DBH->prepare($sql);
         $kysely->execute();
         $tulos = $kysely->fetch();
         if ($tulos[0] == 0) { //email ei ole käytössä/email isnt used
-          $STH = $DBH->prepare("INSERT INTO wsk_projekti (userName, userEmail, userPwd) VALUES (:name, :email, :pwd);");
+          $STH = $DBH->prepare("INSERT INTO testi_projekti (userName, userEmail, userPwd) VALUES (:name, :email, :pwd);");
           $STH->execute($data);
           header("Location: Main.php"); //Palataan pääsivulle kirjautuneena/return to the mainpage
         } else {

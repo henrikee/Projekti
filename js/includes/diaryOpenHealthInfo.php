@@ -14,10 +14,9 @@ include("header.php");
     <?php
         echo $_SESSION['username'];
     ?>
-    <?php
 
-
-$sql="SELECT gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning FROM testi_projekti_terveystiedot WHERE userID = '".$_SESSION['userID']."'";
+<?php
+$sql="SELECT gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning FROM testi_projekti_terveystiedot";
 $kysely=$DBH->prepare($sql);                
 $kysely->execute();
     echo("<br><table class='hdata'>
@@ -35,10 +34,8 @@ $kysely->execute();
             <th class='HDth'>Verenpaine arvio</th>
             
         </tr>");
-    while ($row=$kysely->fetch()){   
-        
-            echo("<tr>
-            <td class='HDtd'>".$row["gender"]."</td>
+    while ($row=$kysely->fetch()){    
+            echo("<tr><td class='HDtd'>".$row["gender"]."</td>
             <td class='HDtd'>".$row["age"]."</td>
             <td class='HDtd'>".$row["height"]."</td>
             <td class='HDtd'>".$row["weight"]."</td>
@@ -50,9 +47,11 @@ $kysely->execute();
             <td class='HDtd'>".$row["diastolic"]."</td>
             <td class='HDtd'>".$row["bloodPressureWarning"]."</td>");
            echo("</tr>");
-
-           
+           echo"rivi 52";
+    var_dump($row);
         }
     echo("</table>");
+    
+    
 
 ?>

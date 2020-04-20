@@ -1,32 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gotu', sans-serif;
     background-image: url("../img/yogamama.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-h1,h2,h3,span{
-    color: white;
+/**NAV:**/
+nav{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #12646f;
+    height: 80px;   
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+label.logo{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color:#ececec;
+    font-size: 3.5vh;
+    line-height: 80px;
+    padding: 0px 40px;
+    letter-spacing: 1px;
+    font-weight: bolder; 
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:#ececec;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    text-shadow: 2px 2px 3px #fbfbfb;
+    transition: .5s;
+}
+.checkbtn{
+    margin-top:25px;
+    font-size: 30px;
+    color:#ececec;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media only screen and (max-width: 1236px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1125px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        text-shadow: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+    a:hover{
+        color: #fbfbfb;
+    }
+}
+@media only screen and (max-width: 923px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#53b0bd;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        z-index: 1;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color:#fbfbfb;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    span{
+        font-size: smaller;
+    }
+}
+
+/*body*/
+header{
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+h1,h3,span{
+    color: #fbfbfb;
     clear: both;
     text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
 }
-header{
-    margin: auto;
-    text-align: center;
-}
-label{
-    padding: 1%;
-    text-shadow: 2px 2px 3px rgba(3, 3, 3, 0.9);
-    letter-spacing: 1px;
-}
-h1,h3{
-    margin: 2%;
-    letter-spacing: 1px;
-}
 h1{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 7rem;
     text-transform: uppercase;
     font-weight: lighter;
+    letter-spacing: 1px;
+}
+h3{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 40%;
+    border-right: 2px solid #fbfbfb;
+    animation: animIntro 3.5s steps(151 ,end), animBar 0.3s step-end infinite;
+}
+/*animaatiot h3*/
+@keyframes animIntro{
+    0%{width:0;}
+    100%{width: 40%;}
+}
+@keyframes animBar{
+    0%, 100%{ border-color: rgba(0,0,0,0.0);}
+    50%{border-color: #12646f}
 }
 span{
     justify-content: center;
@@ -41,25 +182,16 @@ span{
     width: 70%;
     height: 70%;
     margin-left: 15%;
-    border: groove rgba(255, 162, 27, 0.5);
+    border: groove #12646f;
     border-radius: 0.5rem;
 }
 section{
     height: 70%;
     margin-bottom: 1%;
 }
-.formbtn{
+.formbtn, .openbtn{
     color: black;
-    background-color:rgba(255,165,0,0.1);
-    position: relative;
-    font-size: larger;
-    border: none;
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-}
-.openbtn{
-    color: black;
-    background-color:rgba(255,165,0,0.1);
+    background-color:#53b1bdab;
     position: relative;
     font-size: larger;
     border: none;
@@ -73,7 +205,7 @@ section{
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 3px solid orange;
+    border: 3px solid #12646f;
     transition: all .8s ease;
 }
 .formbtn::after{
@@ -90,10 +222,9 @@ section{
 }
 .formbtn:hover{
     background: none;
-    color:rgba(255, 217, 0, 0);
 }
 .formbtn:hover::after, .formbtn:hover::before{
-    background-color:rgba(255,165,0,0.2);
+    background-color:#53b1bd91;
     width: 100%;
     height: 100%;
 }
@@ -102,7 +233,7 @@ section{
     position: absolute;
     width: 25%;
     height: 25%;
-    border: 3px solid orange;
+    border: 3px solid #12646f;
     transition: all .8s ease;
 }
 .openbtn::after{
@@ -119,10 +250,9 @@ section{
 }
 .openbtn:hover{
     background: none;
-    color:rgba(255, 217, 0, 0);
 }
 .openbtn:hover::after, .openbtn:hover::before{
-    background-color:rgba(255,165,0,0.2);
+    background-color:#53b1bd91;
     width: 100%;
     height: 100%;
 }
@@ -137,12 +267,13 @@ section{
 /*heathForm.php*/
 .healthform{
     display: block;
-    background-color: #fff7f1ab;
-    border: groove rgba(255, 162, 27, 0.5);
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
 }
 .healthformfs{
     display: block;
-    background-color: #fff7f1ab;
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
 }
 /*Terveystietojen taulukko*/
 /*.healthdata{
@@ -152,8 +283,8 @@ section{
     margin-bottom: 10%;
 }*/
 .hdata{
-    border: groove rgba(255, 162, 27, 0.5);
-    background-color: #ffe6d3b7;
+    background-color:#fbfbfbd3;
+    border: 1px solid #53b1bd;
     display: block;
     float: left;
     width: 70%;
@@ -169,10 +300,11 @@ section{
 }
 .HDtd{
     text-align: center;
-    background-color: #fff7f170;
+    background-color:#53b1bde8;
     display: table-cell;
     vertical-align: inherit;
 }
+<<<<<<< HEAD
 
 
 #link{
@@ -331,3 +463,5 @@ a.active,a:hover{
     float: left;
 }
 
+=======
+>>>>>>> 6db58b2d59274e4fb87aefa8b63dce00d699c528
