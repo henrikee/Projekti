@@ -1,6 +1,8 @@
-<fieldset class="healthform"><legend class="healthformfs">Terveystiedot</legend>
-    <form method="post">
-        <p>
+<form class="diaryMark" method="post">
+<div><label class="diaryMarkingLabel">Sukupuoli</label><br>
+<input type="radio" name="givenGender">Mies</option>
+
+</div>
             Sukupuoli:  <input type="radio" name="givenGender" value="mies"> Mies</option>
                         <input type="radio" name="givenGender" value="nainen"> Nainen</option>
                         <input type="radio" name="givenGender" value="muu"> Muu</option><br> 
@@ -13,5 +15,5 @@
         <p>Systolinen (yläpaine) (Hgmm): <input type="text" name="givenSystolic"/></p>
         <p>Diastolinen (alapaine) (Hgmm): <input type="text" name="givenDiastolic"/></p>
         <p><button type="submit" name="submitHealthydata">Hyväksy terveystiedot</button>
-            <button type="reset" name="resetHealthydata">Hylkää terveystiedot</button></p>
-</fieldset>
+            <button type="reset" name="resetHealthydata">Hylkää terveystiedot</button>
+</form>
