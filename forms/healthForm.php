@@ -1,6 +1,8 @@
-<fieldset class="healthform"><legend class="healthformfs">Terveystiedot</legend>
-    <form method="post">
-        <p>
+<form class="diaryMark" method="post">
+<div><label class="diaryMarkingLabel">Sukupuoli</label><br>
+<input type="radio" name="givenGender">Mies</option>
+
+</div>
             Sukupuoli:  <input type="radio" name="givenGender" value="mies"> Mies</option>
                         <input type="radio" name="givenGender" value="nainen"> Nainen</option>
                         <input type="radio" name="givenGender" value="muu"> Muu</option><br> 
