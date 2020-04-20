@@ -4,7 +4,6 @@ include("forms/formHealth.php");
 include_once("functions/healthyCalculator.php");
 ?>
 <!doctype html>
-
 <html lang="en">
 <head>
 <title>Terveystietolomake</title>
@@ -12,12 +11,9 @@ include_once("functions/healthyCalculator.php");
 </head>
 <body>
     <div></div>
-    welcome
-    <?php 
-    echo("<p>** User: " .$_SESSION['suserName']. " " . $_SESSION['suserEmail']);
-    
+    <?php
+        echo $_SESSION['username'];
     ?>
-    
 <?php
     //Tallennetaanko terveystiedot
     if(isset($_POST['submitHealthydata'])){
@@ -53,28 +49,6 @@ include_once("functions/healthyCalculator.php");
      }
 ?>
 <?php
-// Halutanko talletetaa tiedot kantaan?
-if(isset($_POST['submitHealthydata'])){
-    //Parametrit taulukkona array
-    $data = ['gender'=> $_SESSION['gender'],
-        'age'=> $_SESSION['age'],
-        'height'=>$_SESSION['height'],
-        'weight'=>$_SESSION['weight'],
-        'bmi'=>$_SESSION['bmi'],
-        'bmiWarning'=>$_SESSION['bmiWarning'],                    
-        'waistCircuit'=>$_SESSION['waistCircuit'],
-        'waistCircuitWarning'=>$_SESSION['waistCircuitWarning'],
-        'systolic'=>$_SESSION['systolic'],
-        'diastolic'=>$_SESSION['diastolic'],
-        'bloodPressureWarning'=>$_SESSION['bloodPressureWarning']];
-    
-    try{
-      //kysely
-       $stmt = $DBH->prepare("INSERT INTO wsk_projekti_terveystiedot (gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning)
-      VALUES (:gender, :age, :height, :weight, :bmi, :bmiWarning, :waistCircuit, :waistCircuitWarning, :systolic, :diastolic, :bloodPressureWarning);");
-      $stmt->execute($data);
-    
-<?php
 if(isset($_POST['submitHealthydata'])){
    try {
        echo"rivi 82";
@@ -101,11 +75,5 @@ if(isset($_POST['submitHealthydata'])){
    }
   }
 ?>
-<<<<<<< HEAD
-=======
-
-
-<hr/>
->>>>>>> 6db58b2d59274e4fb87aefa8b63dce00d699c528
 </body>
 </html>
