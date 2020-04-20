@@ -84,7 +84,7 @@ if(isset($_POST['submitHealthydata'])){
         session_unset();
         session_destroy();
     //Palataan takaisin tälle samalle sivulle jolloin sessio käynnistyy uudelleen
-        header("Location: " . $_SERVER['PHP_SELF']);
+        header("Location:  . $_SERVER['PHP_SELF']);
     }
 ?>
 <?php
