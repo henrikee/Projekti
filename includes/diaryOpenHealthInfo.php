@@ -14,9 +14,10 @@ include("header.php");
     <?php
         echo $_SESSION['username'];
     ?>
+    <?php
 
-<?php
-$sql="SELECT gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning FROM testi_projekti_terveystiedot";
+
+$sql="SELECT gender, age, height, weight, bmi, bmiWarning, waistCircuit, waistCircuitWarning, systolic, diastolic, bloodPressureWarning FROM testi_projekti_terveystiedot WHERE userID = '".$_SESSION['userID']."'";
 $kysely=$DBH->prepare($sql);                
 $kysely->execute();
     echo("<br><table class='hdata'>
